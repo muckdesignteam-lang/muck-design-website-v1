@@ -209,3 +209,91 @@
 @media(prefers-reduced-motion:reduce){
   .galleryFrame img,.detailFrame img,.processFrame img{transition:none!important;transform:none!important}
 }
+
+
+/* V8.1 — Project-detail proportion refinements only */
+.projectDetailPage .projectHeroMeta{
+  grid-template-columns:1fr 1fr;
+  gap:54px;
+  padding-top:58px;
+  padding-bottom:38px;
+}
+.projectDetailPage .projectHeroMeta h1{
+  font-size:clamp(38px,4.2vw,64px);
+  line-height:.94;
+  letter-spacing:-.045em;
+  max-width:620px;
+}
+.projectDetailPage .projectHeroImage{
+  width:min(100% - 8vw, 1440px);
+  margin-inline:auto;
+  aspect-ratio:16/7.4;
+  min-height:0;
+}
+.projectDetailPage .projectGallerySection{
+  width:min(100%, 1280px);
+  margin-inline:auto;
+  padding:54px 4vw;
+}
+.projectDetailPage .editorialGallery{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:16px;
+  max-width:1180px;
+  margin-inline:auto;
+  margin-top:24px;
+}
+.projectDetailPage .editorialGallery .galleryWide{
+  grid-column:auto;
+}
+.projectDetailPage .galleryFrame,
+.projectDetailPage .galleryWide .galleryFrame{
+  aspect-ratio:4/3;
+}
+.projectDetailPage .detailGrid{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px;
+  max-width:1120px;
+  margin-inline:auto;
+  margin-top:26px;
+}
+.projectDetailPage .detailFrame{
+  aspect-ratio:4/3;
+}
+.projectDetailPage .processGrid{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:16px;
+  max-width:1120px;
+  margin-inline:auto;
+  margin-top:28px;
+}
+.projectDetailPage .processFrame{
+  aspect-ratio:4/3;
+}
+.projectDetailPage .processGrid figcaption{display:none}
+
+@media(max-width:900px){
+  .projectDetailPage .projectHeroMeta{
+    grid-template-columns:1fr;
+    padding-top:44px;
+    padding-bottom:32px;
+  }
+  .projectDetailPage .projectHeroMeta h1{font-size:clamp(34px,9vw,52px)}
+  .projectDetailPage .projectHeroImage{
+    width:100%;
+    aspect-ratio:4/3;
+  }
+  .projectDetailPage .editorialGallery,
+  .projectDetailPage .detailGrid{
+    grid-template-columns:1fr 1fr;
+  }
+  .projectDetailPage .processGrid{
+    grid-template-columns:1fr 1fr;
+  }
+}
+@media(max-width:520px){
+  .projectDetailPage .editorialGallery,
+  .projectDetailPage .detailGrid,
+  .projectDetailPage .processGrid{
+    grid-template-columns:1fr;
+  }
+}

@@ -17,13 +17,16 @@ const finished = [
 const details = [
   ["/images/projects/moden-rangsit-klong-4/detail-cabinet.png","Cabinetry detail"],
   ["/images/projects/moden-rangsit-klong-4/detail-faucet.png","Material / hardware detail"],
+  ["/images/projects/moden-rangsit-klong-4/detail-wall-build-up.jpg","Construction detail"],
 ];
 
 const process = [
-  ["/images/projects/moden-rangsit-klong-4/process-01.jpg","Before / early site condition"],
-  ["/images/projects/moden-rangsit-klong-4/process-02.jpg","Construction / partition stage"],
-  ["/images/projects/moden-rangsit-klong-4/process-03.jpg","Built-in installation stage"],
-  ["/images/projects/moden-rangsit-klong-4/process-04.jpg","Near-completion stage"],
+  ["/images/projects/moden-rangsit-klong-4/process-01.jpg","Process 01"],
+  ["/images/projects/moden-rangsit-klong-4/process-02.jpg","Process 02"],
+  ["/images/projects/moden-rangsit-klong-4/process-03.jpg","Process 03"],
+  ["/images/projects/moden-rangsit-klong-4/process-04.jpg","Process 04"],
+  ["/images/projects/moden-rangsit-klong-4/process-05.png","Process 05"],
+  ["/images/projects/moden-rangsit-klong-4/process-06.jpg","Process 06"],
 ];
 
 export default function ModenRangsitProject(){
@@ -101,8 +104,7 @@ export default function ModenRangsitProject(){
       </p>
       <div className="processGrid">
         {process.map(([src,alt])=><figure key={src}>
-          <div className="processFrame"><Image src={src} alt={alt} fill quality={92} sizes="(max-width:900px) 100vw, 25vw"/></div>
-          <figcaption>{alt}</figcaption>
+          <div className="processFrame"><Image src={src} alt={alt} fill quality={92} sizes="(max-width:900px) 100vw, 33vw"/></div>
         </figure>)}
       </div>
     </section>

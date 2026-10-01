@@ -12,13 +12,25 @@
   ],
   "details": [
     "detail-cabinet.png",
-    "detail-faucet.png"
+    "detail-faucet.png",
+    "detail-wall-build-up.jpg"
   ],
   "process": [
     "process-01.jpg",
     "process-02.jpg",
     "process-03.jpg",
-    "process-04.jpg"
+    "process-04.jpg",
+    "process-05.png",
+    "process-06.jpg"
   ],
-  "note": "Do not replace, rename, regenerate, or remap these files unless explicitly requested by the user."
+  "note": "Do not replace, rename, regenerate, or remap these files unless explicitly requested by the user.",
+  "v8_1_notes": [
+    "Project title reduced in scale.",
+    "Hero image height reduced.",
+    "Finished gallery changed to a smaller 3-column desktop grid.",
+    "Details changed to a smaller 3-column desktop grid.",
+    "Before & Process uses six approved images with captions removed.",
+    "Visible Galaxy S23 Ultra marks removed from the live compositions via restrained crop.",
+    "Homepage locked assets unchanged."
+  ]
 }
