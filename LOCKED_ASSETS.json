@@ -1,0 +1,103 @@
+{
+  "version": "V6 MASTER LOCKED ASSETS",
+  "rule": "Do not replace, rename, regenerate, edit, crop, remap or recompress these master files unless the user explicitly asks to change that exact asset.",
+  "logo": {
+    "web_file": "public/logo/muck-logo.png",
+    "approved_source": "a_clean_isolated_logo_graphic_on_a_transparent_che.png",
+    "sha256": "4864a65d32f26d852b61dbf6fb3b65ceea2c85dede68afcea252c43b64fc08f1"
+  },
+  "assets": [
+    {
+      "web_file": "public/images/hero-residential.jpg",
+      "approved_source": "IMG_Cover.jpg",
+      "sha256": "041d79022d830e78facad913fe729a6fc85aa61bb2821598aebcd390d6733dfc"
+    },
+    {
+      "web_file": "public/images/transform-understand.jpg",
+      "approved_source": "transform-understand.jpg",
+      "sha256": "4d21f5416b9ac8d1c38047868c9f47027869e26d082c7a81115b015cb25146c7"
+    },
+    {
+      "web_file": "public/images/transform-plan-design.jpg",
+      "approved_source": "transform-plan-design(1).jpg",
+      "sha256": "d33273964062893b58b53b71b55f46c436e78bbf88c7fbf2a4678ea53fbb359e"
+    },
+    {
+      "web_file": "public/images/transform-build.jpg",
+      "approved_source": "transform-build(1).jpg",
+      "sha256": "5562ec4142e84ffa93ec4e1abaa7068f94cfb5d185e7848f8bf453549404fb30"
+    },
+    {
+      "web_file": "public/images/transform-complete.jpg",
+      "approved_source": "transform-complete(1).jpg",
+      "sha256": "0655cf667d5cfcb3f7d00f58fd5eac6247d747020f8919628e40cdb3f5888ecf"
+    },
+    {
+      "web_file": "public/images/project-new-home.jpg",
+      "approved_source": "project-new-home.jpg",
+      "sha256": "1663e0489d714ee87a7166842de650395d087e46bf290f7509c0cb135e469108"
+    },
+    {
+      "web_file": "public/images/project-renovation.jpg",
+      "approved_source": "project home renovation.jpg",
+      "sha256": "986ebf4ee44a0bf90278468e9c477129db82c862a38de4fe975e038672ba84ff"
+    },
+    {
+      "web_file": "public/images/project-commercial.png",
+      "approved_source": "Modern Warm Dental Clinic Reception(2).png",
+      "sha256": "b6131689264d6b8fd4eaa844031ea7ad91e3ca76bcdabe9d4efff3b79091160b"
+    },
+    {
+      "web_file": "public/images/service-turnkey.png",
+      "approved_source": "Warm Scandinavian Kitchen Island(1).png",
+      "sha256": "c20901dff6603212c37db5e5f711ced7c316df07bb0826146018e1785870a56a"
+    },
+    {
+      "web_file": "public/images/attention-material.jpg",
+      "approved_source": "attention-material.jpg",
+      "sha256": "9b14797e9491b03af77628f19737d7cc88b0b9bb64d0c38b86caecd6c10f81ec"
+    },
+    {
+      "web_file": "public/images/attention-craftsmanship.png",
+      "approved_source": "a_clean_high_resolution_interior_design_compariso.png",
+      "sha256": "6d856a1839cb542e4d627a52e4d6c402a1fa5115ed2a1d91903697cd013c4a78"
+    },
+    {
+      "web_file": "public/images/attention-onsite.jpg",
+      "approved_source": "attention-onsite.jpg",
+      "sha256": "1673686a336a1b52d5415b7cbaa185bc93e14637a1f9d17e2f425b1ca38cd8a4"
+    },
+    {
+      "web_file": "public/images/attention-finishing.jpg",
+      "approved_source": "attention-finishing.jpg",
+      "sha256": "3647bd9e0afc971dcd9e1ee4f07c408b7970aa4e90d4b81fffe15a12eed042c2"
+    },
+    {
+      "web_file": "public/images/cta-bedroom.png",
+      "approved_source": "sunlit_scandinavian_bedroom_retreat.png",
+      "sha256": "f20237bc7e81143df89dcd865de7d8a4ec37b37a63a143873b02d83b3d68ec70"
+    }
+  ],
+  "section_map": {
+    "Hero": "hero-residential.jpg",
+    "How We Transform Space": {
+      "UNDERSTAND": "transform-understand.jpg",
+      "PLAN & DESIGN": "transform-plan-design.jpg",
+      "BUILD": "transform-build.jpg",
+      "COMPLETE": "transform-complete.jpg"
+    },
+    "Selected Projects": {
+      "New Home": "project-new-home.jpg",
+      "Home Renovation": "project-renovation.jpg",
+      "Commercial": "project-commercial.png"
+    },
+    "Our Services / Turnkey": "service-turnkey.png",
+    "Built With Attention": {
+      "MATERIAL": "attention-material.jpg",
+      "CRAFTSMANSHIP": "attention-craftsmanship.png",
+      "ON SITE": "attention-onsite.jpg",
+      "FINISHING": "attention-finishing.jpg"
+    },
+    "CTA": "cta-bedroom.png"
+  }
+}
