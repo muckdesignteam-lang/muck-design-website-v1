@@ -1,0 +1,124 @@
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+
+const projectData = [
+  {
+    id: "new-home",
+    category: "RESIDENTIAL · NEW HOME",
+    title: "New Home",
+    subtitle: "Interior & Built-in",
+    image: "/images/project-new-home.jpg",
+    th: "งานตกแต่งภายในและ Built-in สำหรับบ้านใหม่ โดยวางแผนพื้นที่และรายละเอียดงานให้เหมาะกับการใช้งานจริงของเจ้าของบ้าน",
+    en: "Interior and built-in work for new homes, coordinated around practical use, detailing, materials and installation."
+  },
+  {
+    id: "home-renovation",
+    category: "RESIDENTIAL · RENOVATION",
+    title: "Home Renovation",
+    subtitle: "Interior & Built-in",
+    image: "/images/project-renovation.jpg",
+    th: "ปรับปรุงพื้นที่เดิมให้ตอบโจทย์การใช้งานใหม่ พร้อมประสานงานงานก่อสร้าง งานระบบ และ Built-in ให้ทำงานต่อเนื่องกัน",
+    en: "Renovation of existing homes with coordinated construction, building services and built-in work."
+  },
+  {
+    id: "commercial",
+    category: "COMMERCIAL",
+    title: "Office / Retail Spaces",
+    subtitle: "Renovation & Built-in",
+    image: "/images/project-commercial.png",
+    th: "งานปรับปรุงและตกแต่งพื้นที่ธุรกิจ โดยคำนึงถึงฟังก์ชัน ภาพลักษณ์ของธุรกิจ ระบบประกอบอาคาร และการส่งมอบพร้อมใช้งาน",
+    en: "Commercial renovation and built-in work coordinated around function, brand environment, building services and handover."
+  }
+];
+
+export default function ProjectsPage() {
+  const [lang, setLang] = useState<"th"|"en">("th");
+
+  return (
+    <main className="projectsPage">
+      <header className="siteHeader">
+        <Link className="brand" href="/" aria-label="MUCK Design home">
+          <Image src="/logo/muck-logo.png" alt="MUCK Design" width={120} height={70} priority />
+        </Link>
+        <nav>
+          <Link href="/projects">Projects</Link>
+          <Link href="/#services">Services</Link>
+          <Link href="/#process">How We Work</Link>
+          <Link href="/#about">About</Link>
+          <Link href="/#contact">Contact</Link>
+        </nav>
+        <div className="headerActions">
+          <button className="lang" onClick={() => setLang(lang === "th" ? "en" : "th")}>
+            {lang === "th" ? "EN | TH" : "TH | EN"}
+          </button>
+          <Link className="contactBtn" href="/#contact">CONTACT US →</Link>
+        </div>
+      </header>
+
+      <section className="projectsIntro">
+        <p className="eyebrow">MUCK DESIGN · SELECTED WORK</p>
+        <h1>PROJECTS</h1>
+        <p>
+          {lang === "th"
+            ? "ตัวอย่างผลงานที่สะท้อนแนวทางการทำงานของเรา ทั้งบ้านใหม่ งานรีโนเวท และพื้นที่เชิงพาณิชย์"
+            : "Selected work across new homes, residential renovation and commercial spaces."}
+        </p>
+      </section>
+
+      <section className="projectsOverview">
+        {projectData.map((project, index) => (
+          <article className="overviewProject" id={project.id} key={project.id}>
+            <div className="overviewImage">
+              <Image
+                src={project.image}
+                alt={project.title}
+                fill
+                quality={95}
+                sizes="(max-width: 900px) 100vw, 58vw"
+              />
+            </div>
+            <div className="overviewCopy">
+              <span className="projectNumber">0{index + 1}</span>
+              <p className="category">{project.category}</p>
+              <h2>{project.title}</h2>
+              <p className="overviewSubtitle">{project.subtitle}</p>
+              <p className="overviewBody">{lang === "th" ? project.th : project.en}</p>
+              <span className="detailSoon">
+                {lang === "th" ? "PROJECT DETAIL — กำลังจัดทำ" : "PROJECT DETAIL — COMING NEXT"}
+              </span>
+            </div>
+          </article>
+        ))}
+      </section>
+
+      <section className="projectsCta">
+        <div>
+          <p className="eyebrow">START A PROJECT</p>
+          <h2>LET’S CREATE<br/>A SPACE THAT WORKS FOR YOU</h2>
+        </div>
+        <div>
+          <p>
+            {lang === "th"
+              ? "หากกำลังวางแผนบ้านใหม่ ปรับปรุงพื้นที่เดิม หรือพื้นที่สำหรับธุรกิจ สามารถพูดคุยรายละเอียดเบื้องต้นกับเราได้"
+              : "Planning a new home, renovation or commercial space? Talk to us about the initial scope."}
+          </p>
+          <a className="solidBtn" href="https://lin.ee/xMvkeiO" target="_blank" rel="noreferrer">
+            TALK TO MUCK DESIGN
+          </a>
+        </div>
+      </section>
+
+      <footer>
+        <div>
+          <span>Muck Design by BS&amp;P Beyond Home Design Co.,Ltd.</span>
+          <span>:</span>
+          <span>The Path to Better Living</span>
+        </div>
+        <Link href="/">← BACK TO HOME</Link>
+      </footer>
+    </main>
+  );
+}

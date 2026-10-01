@@ -85,3 +85,78 @@
 @media (max-width: 520px){
   .brand img{width:76px!important;height:auto!important}
 }
+
+
+/* V7 Projects overview — homepage locked assets unchanged */
+.projectCardLink{display:block;color:inherit}
+.projectsIntro{padding:86px 6vw 62px;border-bottom:1px solid var(--line);background:var(--paper)}
+.projectsIntro h1{font-family:var(--font-manrope),sans-serif;font-size:clamp(58px,9vw,132px);line-height:.9;letter-spacing:-.055em;font-weight:600;margin:14px 0 28px}
+.projectsIntro>p:last-child{font-family:var(--font-ibm-plex-thai),var(--font-manrope),sans-serif;max-width:690px;color:#5c5851;font-size:16px;line-height:1.75}
+.projectsOverview{padding:0 4vw 42px;background:#faf8f3}
+.overviewProject{display:grid;grid-template-columns:minmax(0,58%) minmax(300px,42%);min-height:520px;border-bottom:1px solid var(--line);scroll-margin-top:100px}
+.overviewProject:nth-child(even) .overviewImage{order:2}
+.overviewProject:nth-child(even) .overviewCopy{order:1}
+.overviewImage{position:relative;min-height:520px;overflow:hidden;background:#ddd}
+.overviewImage img{object-fit:cover;transition:transform .65s cubic-bezier(.22,.61,.36,1)}
+.overviewProject:hover .overviewImage img{transform:scale(1.018)}
+.overviewCopy{padding:54px 5vw;display:flex;flex-direction:column;justify-content:center}
+.projectNumber{font-family:var(--font-manrope),sans-serif;font-size:11px;letter-spacing:.12em;color:#9a948b;margin-bottom:30px}
+.overviewCopy h2{font-family:var(--font-manrope),sans-serif;font-size:clamp(38px,4vw,64px);line-height:.98;letter-spacing:-.035em;font-weight:500;margin:10px 0}
+.overviewSubtitle{font-family:var(--font-manrope),sans-serif;font-size:15px;margin:0 0 28px;color:#555}
+.overviewBody{font-family:var(--font-ibm-plex-thai),var(--font-manrope),sans-serif;max-width:500px;font-size:14px;line-height:1.75;color:#6a655d;margin:0 0 32px}
+.detailSoon{font-size:10px;letter-spacing:.11em;border-top:1px solid var(--line);padding-top:15px;color:#837d73}
+.projectsCta{display:grid;grid-template-columns:1fr 1fr;gap:50px;padding:70px 6vw;background:#f2eee5}
+.projectsCta h2{font-family:var(--font-manrope),sans-serif;font-size:clamp(34px,4.5vw,66px);line-height:.98;letter-spacing:-.04em;font-weight:500;margin:14px 0 0}
+.projectsCta>div:last-child{align-self:end}
+.projectsCta>div:last-child>p{font-family:var(--font-ibm-plex-thai),var(--font-manrope),sans-serif;max-width:520px;line-height:1.7;color:#5f5a52}
+.projectsPage footer>a{font-size:11px;letter-spacing:.06em}
+
+@media(max-width:900px){
+  .projectsIntro{padding:58px 24px 46px}
+  .overviewProject,.overviewProject:nth-child(even){grid-template-columns:1fr;min-height:0}
+  .overviewProject:nth-child(even) .overviewImage,.overviewProject:nth-child(even) .overviewCopy{order:initial}
+  .overviewImage{min-height:0;aspect-ratio:16/10}
+  .overviewCopy{padding:38px 24px 52px}
+  .projectsCta{grid-template-columns:1fr;padding:54px 24px;gap:24px}
+}
+@media(max-width:520px){
+  .projectsIntro h1{font-size:56px}
+  .overviewImage{aspect-ratio:16/10}
+  .overviewCopy h2{font-size:38px}
+}
+@media(prefers-reduced-motion:reduce){
+  .overviewImage img{transition:none!important}
+  .overviewProject:hover .overviewImage img{transform:none!important}
+}
+
+
+/* V7.1 project-card affordance */
+.projectCardLink{display:block;color:inherit}
+.projectCardLink article{cursor:pointer}
+.viewProjectLink{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  margin-top:12px;
+  padding-top:10px;
+  border-top:1px solid var(--line);
+  font-family:var(--font-manrope),sans-serif;
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:.09em;
+  color:#3f3b35;
+}
+.viewProjectLink span{
+  display:inline-block;
+  transition:transform .28s ease;
+}
+@media (hover:hover) and (pointer:fine){
+  .projectCardLink:hover .viewProjectLink span{transform:translateX(4px)}
+}
+@media(max-width:520px){
+  .viewProjectLink{font-size:10px;margin-top:10px}
+}
+@media(prefers-reduced-motion:reduce){
+  .viewProjectLink span{transition:none!important}
+  .projectCardLink:hover .viewProjectLink span{transform:none!important}
+}
