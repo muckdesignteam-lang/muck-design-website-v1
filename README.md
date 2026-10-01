@@ -18,3 +18,11 @@ MUCK Design Website v2 corrected locked build. Replace the existing app/ and pub
 - Refined hover motion on project/detail cards and buttons.
 - Motion is disabled automatically for users who prefer reduced motion.
 - Locked layout and image selections remain unchanged.
+
+## V5 corrections
+- Restored the hero image using its natural aspect ratio.
+- The hero wrapper clips only the small bottom watermark strip; the photo is not stretched.
+- Replaced low-resolution mockup crops with original high-resolution source files.
+- Increased Next.js image quality to 95 for principal photography.
+- Selected Project cards remain locked to a consistent 16:9 frame.
+- Typography and restrained motion from V4 remain unchanged.
