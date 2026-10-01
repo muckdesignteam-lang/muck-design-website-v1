@@ -76,3 +76,12 @@
 @media(prefers-reduced-motion:reduce){
   .heroPhoto{animation:none!important}
 }
+
+
+/* V6.1 mobile logo size refinement — locked assets unchanged */
+@media (max-width: 900px){
+  .brand img{width:90px!important;height:auto!important}
+}
+@media (max-width: 520px){
+  .brand img{width:76px!important;height:auto!important}
+}
