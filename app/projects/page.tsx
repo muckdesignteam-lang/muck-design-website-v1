@@ -86,9 +86,9 @@ export default function ProjectsPage() {
               <h2>{project.title}</h2>
               <p className="overviewSubtitle">{project.subtitle}</p>
               <p className="overviewBody">{lang === "th" ? project.th : project.en}</p>
-              <span className="detailSoon">
-                {lang === "th" ? "PROJECT DETAIL — กำลังจัดทำ" : "PROJECT DETAIL — COMING NEXT"}
-              </span>
+              {project.id==="new-home"
+                ? <Link className="detailSoon detailReady" href="/projects/moden-rangsit-klong-4">{lang==="th"?"VIEW PROJECT →":"VIEW PROJECT →"}</Link>
+                : <span className="detailSoon">{lang === "th" ? "PROJECT DETAIL — กำลังจัดทำ" : "PROJECT DETAIL — COMING NEXT"}</span>}
             </div>
           </article>
         ))}

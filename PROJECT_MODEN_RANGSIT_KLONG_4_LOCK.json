@@ -1,0 +1,24 @@
+{
+  "project": "Moden Rangsit Klong 4",
+  "hero": "hero-finished13.jpg",
+  "finished": [
+    "finished-kitchen.jpg",
+    "finished-shrine.jpg",
+    "finished-living.jpg",
+    "finished-wide.jpg",
+    "finished-pantry.jpg",
+    "finished-bedroom.jpg",
+    "finished-office.jpg"
+  ],
+  "details": [
+    "detail-cabinet.png",
+    "detail-faucet.png"
+  ],
+  "process": [
+    "process-01.jpg",
+    "process-02.jpg",
+    "process-03.jpg",
+    "process-04.jpg"
+  ],
+  "note": "Do not replace, rename, regenerate, or remap these files unless explicitly requested by the user."
+}

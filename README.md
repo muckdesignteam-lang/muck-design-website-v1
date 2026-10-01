@@ -27,3 +27,11 @@ V6 preserves the current typography, Thai default, layout, responsive behavior, 
 - `VIEW ALL PROJECTS →` remains in the Selected Projects header as the browse-all action.
 - Added subtle arrow movement on desktop hover.
 - No locked assets, typography, project imagery, or homepage layout structure were changed.
+
+
+## V8 — Moden Rangsit Klong 4 project detail
+- Added `/projects/moden-rangsit-klong-4`.
+- New Home card now opens this detail page.
+- Uses only the approved project image set.
+- Added project-level asset lock manifest.
+- Homepage locked assets remain unchanged.

@@ -160,3 +160,52 @@
   .viewProjectLink span{transition:none!important}
   .projectCardLink:hover .viewProjectLink span{transform:none!important}
 }
+
+
+/* V8 — Project detail page: Moden Rangsit Klong 4 */
+.projectHeroMeta{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;padding:72px 5vw 48px;background:var(--paper);border-bottom:1px solid var(--line)}
+.projectHeroMeta h1{font-family:var(--font-manrope),sans-serif;font-size:clamp(52px,7vw,112px);line-height:.92;letter-spacing:-.055em;font-weight:600;margin:14px 0 0}
+.projectMetaGrid{display:grid;gap:18px;align-self:end}
+.projectMetaGrid>div{padding-top:12px;border-top:1px solid var(--line);display:grid;grid-template-columns:95px 1fr;gap:18px}
+.projectMetaGrid span{font-size:10px;letter-spacing:.08em;color:#8a847b;text-transform:uppercase}
+.projectMetaGrid strong{font-family:var(--font-ibm-plex-thai),var(--font-manrope),sans-serif;font-size:13px;font-weight:500}
+.projectHeroImage{position:relative;aspect-ratio:16/8.8;min-height:520px;background:#ddd;overflow:hidden}
+.projectHeroImage img{object-fit:cover;object-position:center center}
+.projectOverviewText{display:grid;grid-template-columns:220px 1fr;gap:40px;padding:56px 6vw 66px;background:#f7f3ea}
+.projectOverviewText>p:last-child{font-family:var(--font-ibm-plex-thai),var(--font-manrope),sans-serif;max-width:850px;font-size:18px;line-height:1.8;margin:0}
+.projectGallerySection{padding:62px 4vw}
+.projectSectionLead{font-family:var(--font-ibm-plex-thai),var(--font-manrope),sans-serif;max-width:760px;color:#625e56;line-height:1.75}
+.editorialGallery{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:24px}
+.editorialGallery figure,.detailGrid figure,.processGrid figure{margin:0}
+.galleryWide{grid-column:1/-1}
+.galleryFrame{position:relative;aspect-ratio:16/11;overflow:hidden;background:#ddd}
+.galleryWide .galleryFrame{aspect-ratio:16/8.8}
+.galleryFrame img,.detailFrame img,.processFrame img{object-fit:cover;transition:transform .55s cubic-bezier(.22,.61,.36,1)}
+.detailGrid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:24px}
+.detailFrame{position:relative;aspect-ratio:4/3;overflow:hidden;background:#ddd}
+.processGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}
+.processFrame{position:relative;aspect-ratio:4/3;overflow:hidden;background:#ddd}
+.processGrid figcaption{font-size:10px;letter-spacing:.04em;color:#777168;margin-top:8px}
+.detailReady{display:inline-block}
+@media(hover:hover) and (pointer:fine){
+  .galleryFrame:hover img,.detailFrame:hover img,.processFrame:hover img{transform:scale(1.018)}
+}
+@media(max-width:900px){
+  .projectHeroMeta{grid-template-columns:1fr;padding:52px 24px 38px;gap:34px}
+  .projectMetaGrid>div{grid-template-columns:80px 1fr}
+  .projectHeroImage{min-height:0;aspect-ratio:4/3}
+  .projectOverviewText{grid-template-columns:1fr;padding:42px 24px 50px;gap:10px}
+  .editorialGallery,.detailGrid{grid-template-columns:1fr}
+  .galleryWide{grid-column:auto}
+  .galleryFrame,.galleryWide .galleryFrame{aspect-ratio:4/3}
+  .processGrid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:520px){
+  .projectHeroMeta h1{font-size:48px}
+  .projectOverviewText>p:last-child{font-size:16px}
+  .projectGallerySection{padding:46px 18px}
+  .processGrid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  .galleryFrame img,.detailFrame img,.processFrame img{transition:none!important;transform:none!important}
+}
