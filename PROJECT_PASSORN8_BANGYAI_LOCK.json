@@ -1,0 +1,14 @@
+{
+  "project": "Passorn 8 Bang Yai",
+  "province": "Nonthaburi",
+  "category": "Renovation & Construction · Residential",
+  "hero": "finished-exterior-wide.jpg",
+  "finished": [
+    "finished-exterior-front.jpg",
+    "finished-bedroom.jpg",
+    "finished-kitchen.jpg",
+    "finished-bathroom.jpg",
+    "finished-walkin.jpg"
+  ],
+  "note": "Hero is not repeated in Finished Spaces. Finished gallery uses five unique images currently."
+}

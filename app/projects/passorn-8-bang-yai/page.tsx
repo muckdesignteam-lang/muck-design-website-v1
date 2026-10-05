@@ -5,9 +5,11 @@ import Link from "next/link";
 import { useState } from "react";
 
 const finished = [
-  ["/images/projects/passorn-8-bang-yai/finished-02.jpg","Finished exterior"],
-  ["/images/projects/passorn-8-bang-yai/finished-03.jpg","Finished renovation"],
-  ["/images/projects/passorn-8-bang-yai/finished-04.jpg","Finished residential renovation"],
+  ["/images/projects/passorn-8-bang-yai/finished-exterior-front.jpg","Front elevation"],
+  ["/images/projects/passorn-8-bang-yai/finished-bedroom.jpg","Bedroom"],
+  ["/images/projects/passorn-8-bang-yai/finished-kitchen.jpg","Kitchen"],
+  ["/images/projects/passorn-8-bang-yai/finished-bathroom.jpg","Bathroom"],
+  ["/images/projects/passorn-8-bang-yai/finished-walkin.jpg","Walk-in / dressing area"],
 ];
 
 const details = [
@@ -48,7 +50,7 @@ export default function Passorn8BangYaiProject(){
       </div>
     </section>
 
-    <section className="projectHeroImage"><Image src="/images/projects/passorn-8-bang-yai/hero-finished.jpg" alt="Passorn 8 Bang Yai residential renovation" fill priority quality={95} sizes="100vw"/></section>
+    <section className="projectHeroImage"><Image src="/images/projects/passorn-8-bang-yai/finished-exterior-wide.jpg" alt="Passorn 8 Bang Yai residential renovation" fill priority quality={95} sizes="100vw"/></section>
 
     <section className="projectOverviewText"><p className="eyebrow">PROJECT OVERVIEW</p><p>{overview}</p></section>
 
