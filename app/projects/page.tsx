@@ -17,8 +17,8 @@ const projectData = [
   {
     id: "home-renovation",
     category: "RESIDENTIAL · RENOVATION",
-    title: "Passorn 8 Bang Yai",
-    subtitle: "Nonthaburi · Renovation & Construction",
+    title: "Home Renovation",
+    subtitle: "Passorn 8 Bang Yai · Nonthaburi",
     image: "/images/projects/passorn-8-bang-yai/hero-finished.jpg",
     th: "รีโนเวทบ้านพักอาศัยเดิม โดยประสานงานงานก่อสร้าง วัสดุ งานติดตั้ง และงานเก็บรายละเอียดจนพร้อมใช้งาน",
     en: "Residential renovation with coordinated construction, material detailing, installation and finishing through completion."
