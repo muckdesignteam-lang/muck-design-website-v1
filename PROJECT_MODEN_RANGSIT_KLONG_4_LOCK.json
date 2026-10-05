@@ -4,7 +4,6 @@
   "finished": [
     "finished-kitchen.jpg",
     "finished-shrine.jpg",
-    "finished-living.jpg",
     "finished-wide.jpg",
     "finished-pantry.jpg",
     "finished-bedroom.jpg",
@@ -32,5 +31,11 @@
     "Before & Process uses six approved images with captions removed.",
     "Visible Galaxy S23 Ultra marks removed from the live compositions via restrained crop.",
     "Homepage locked assets unchanged."
+  ],
+  "v8_2_notes": [
+    "Hero remains Finished13.jpg.",
+    "Finished Spaces now contains six unique images and no longer repeats the Hero.",
+    "Public project names for Projects 2–4 recorded for portfolio use.",
+    "Customer names are not used publicly."
   ]
 }

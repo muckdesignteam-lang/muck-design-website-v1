@@ -1,0 +1,26 @@
+{
+  "project_1": {
+    "en": "Moden Rangsit Klong 4",
+    "th": "โมเดน รังสิต คลอง 4"
+  },
+  "project_2": {
+    "en": "Bangkok Boulevard Tiwanon-Rangsit",
+    "th": "บางกอก บูเลอวาร์ด ติวานนท์-รังสิต"
+  },
+  "project_3": {
+    "en": "Soi Ari 8",
+    "th": "ซอยอารีย์ 8"
+  },
+  "project_4": {
+    "en": "Golden Neo Bangna-Suan Luang",
+    "th": "โกลเด้น นีโอ บางนา-สวนหลวง"
+  },
+  "project_5": {
+    "en": "Passorn 8 Bang Yai",
+    "th": "ภัสสร 8 บางใหญ่",
+    "province_en": "Nonthaburi",
+    "province_th": "นนทบุรี",
+    "category_en": "Residential Renovation",
+    "category_th": "รีโนเวทบ้านพักอาศัย"
+  }
+}

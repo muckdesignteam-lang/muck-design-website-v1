@@ -35,3 +35,12 @@ V6 preserves the current typography, Thai default, layout, responsive behavior, 
 - Uses only the approved project image set.
 - Added project-level asset lock manifest.
 - Homepage locked assets remain unchanged.
+
+## V8.3 — Passorn 8 Bang Yai renovation project
+- Added `/projects/passorn-8-bang-yai`.
+- Uses the revised approved Project 5 photography.
+- Hero is not repeated in the Finished Spaces gallery.
+- Added 4 Construction Details and 6 Before & Process images.
+- Home Renovation overview card now opens this project.
+- Homepage Renovation card image remains unchanged; only its link was updated.
+- Customer name is not shown publicly.

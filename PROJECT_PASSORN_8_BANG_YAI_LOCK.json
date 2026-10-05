@@ -1,0 +1,26 @@
+{
+  "project": "Passorn 8 Bang Yai",
+  "public_name_th": "ภัสสร 8 บางใหญ่",
+  "province": "Nonthaburi",
+  "hero": "hero-finished.jpg",
+  "finished": [
+    "finished-02.jpg",
+    "finished-03.jpg",
+    "finished-04.jpg"
+  ],
+  "construction_details": [
+    "detail-01.jpg",
+    "detail-02.jpg",
+    "detail-03.jpg",
+    "detail-04.jpg"
+  ],
+  "before_process": [
+    "process-01-before.jpg",
+    "process-02-design.jpg",
+    "process-03-demolition.jpg",
+    "process-04-construction.jpg",
+    "process-05-finishing.jpg",
+    "process-06-near-complete.jpg"
+  ],
+  "note": "Use these approved revised images only unless explicitly changed by the user. Homepage locked image asset remains unchanged; only its link now opens this project."
+}

@@ -297,3 +297,13 @@
     grid-template-columns:1fr;
   }
 }
+
+/* V8.3 — Passorn 8 Bang Yai project detail */
+.projectDetailPage .detailGridFour{grid-template-columns:repeat(4,minmax(0,1fr));max-width:1180px}
+@media(max-width:900px){.projectDetailPage .detailGridFour{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.projectDetailPage .detailGridFour{grid-template-columns:1fr}}
+
+/* V8.3 — Passorn 8 Bang Yai project detail */
+.projectDetailPage .detailGridFour{grid-template-columns:repeat(4,minmax(0,1fr));max-width:1180px}
+@media(max-width:900px){.projectDetailPage .detailGridFour{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.projectDetailPage .detailGridFour{grid-template-columns:1fr}}

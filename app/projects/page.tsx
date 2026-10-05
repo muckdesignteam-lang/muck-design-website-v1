@@ -17,11 +17,11 @@ const projectData = [
   {
     id: "home-renovation",
     category: "RESIDENTIAL · RENOVATION",
-    title: "Home Renovation",
-    subtitle: "Interior & Built-in",
-    image: "/images/project-renovation.jpg",
-    th: "ปรับปรุงพื้นที่เดิมให้ตอบโจทย์การใช้งานใหม่ พร้อมประสานงานงานก่อสร้าง งานระบบ และ Built-in ให้ทำงานต่อเนื่องกัน",
-    en: "Renovation of existing homes with coordinated construction, building services and built-in work."
+    title: "Passorn 8 Bang Yai",
+    subtitle: "Nonthaburi · Renovation & Construction",
+    image: "/images/projects/passorn-8-bang-yai/hero-finished.jpg",
+    th: "รีโนเวทบ้านพักอาศัยเดิม โดยประสานงานงานก่อสร้าง วัสดุ งานติดตั้ง และงานเก็บรายละเอียดจนพร้อมใช้งาน",
+    en: "Residential renovation with coordinated construction, material detailing, installation and finishing through completion."
   },
   {
     id: "commercial",
@@ -87,7 +87,9 @@ export default function ProjectsPage() {
               <p className="overviewSubtitle">{project.subtitle}</p>
               <p className="overviewBody">{lang === "th" ? project.th : project.en}</p>
               {project.id==="new-home"
-                ? <Link className="detailSoon detailReady" href="/projects/moden-rangsit-klong-4">{lang==="th"?"VIEW PROJECT →":"VIEW PROJECT →"}</Link>
+                ? <Link className="detailSoon detailReady" href="/projects/moden-rangsit-klong-4">VIEW PROJECT →</Link>
+                : project.id==="home-renovation"
+                ? <Link className="detailSoon detailReady" href="/projects/passorn-8-bang-yai">VIEW PROJECT →</Link>
                 : <span className="detailSoon">{lang === "th" ? "PROJECT DETAIL — กำลังจัดทำ" : "PROJECT DETAIL — COMING NEXT"}</span>}
             </div>
           </article>

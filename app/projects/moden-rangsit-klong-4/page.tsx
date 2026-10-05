@@ -7,7 +7,6 @@ import { useState } from "react";
 const finished = [
   ["/images/projects/moden-rangsit-klong-4/finished-kitchen.jpg","Kitchen"],
   ["/images/projects/moden-rangsit-klong-4/finished-shrine.jpg","Built-in feature"],
-  ["/images/projects/moden-rangsit-klong-4/finished-living.jpg","Living area"],
   ["/images/projects/moden-rangsit-klong-4/finished-wide.jpg","Whole-space view"],
   ["/images/projects/moden-rangsit-klong-4/finished-pantry.jpg","Pantry / built-in"],
   ["/images/projects/moden-rangsit-klong-4/finished-bedroom.jpg","Bedroom"],
