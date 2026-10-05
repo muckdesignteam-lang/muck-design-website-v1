@@ -51,3 +51,11 @@ V6 preserves the current typography, Thai default, layout, responsive behavior, 
 - Commercial overview card now links to the Dental Clinic project.
 - Added 1 Hero, 7 Finished, 3 Details, and 5 Before & Process images.
 - Clinic branding/signage preserved as photographed.
+
+
+## V8.7.1 — New Home Category Structure
+- Main `/projects` page restored to category-level structure only.
+- Removed Bangkok Boulevard as a standalone card from the main Projects overview.
+- New Home now links to `/projects/new-home`.
+- `/projects/new-home` lists Moden Rangsit Klong 4, Bangkok Boulevard Tiwanon-Rangsit, Soi Ari 8 and Golden Neo Bangna–Suanluang.
+- First two projects are active; Projects 3–4 remain clearly marked as coming next until their photography is ready.

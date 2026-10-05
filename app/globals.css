@@ -307,3 +307,8 @@
 .projectDetailPage .detailGridFour{grid-template-columns:repeat(4,minmax(0,1fr));max-width:1180px}
 @media(max-width:900px){.projectDetailPage .detailGridFour{grid-template-columns:1fr 1fr}}
 @media(max-width:520px){.projectDetailPage .detailGridFour{grid-template-columns:1fr}}
+
+.categoryPlaceholder{background:#f1eee7;display:flex;align-items:center;justify-content:center}
+.categoryPlaceholderInner{display:flex;flex-direction:column;gap:10px;align-items:center;justify-content:center;text-align:center;padding:30px;color:#7c766d}
+.categoryPlaceholderInner span{font-size:10px;letter-spacing:.15em}
+.categoryPlaceholderInner strong{font-size:13px;letter-spacing:.08em;font-weight:500}
