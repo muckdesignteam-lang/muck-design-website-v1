@@ -44,3 +44,10 @@ V6 preserves the current typography, Thai default, layout, responsive behavior, 
 - Home Renovation overview card now opens this project.
 - Homepage Renovation card image remains unchanged; only its link was updated.
 - Customer name is not shown publicly.
+
+
+## V8.6 — Commercial / Dental Clinic
+- Added Dental Clinic detail page at `/projects/dental-clinic-chachoengsao`.
+- Commercial overview card now links to the Dental Clinic project.
+- Added 1 Hero, 7 Finished, 3 Details, and 5 Before & Process images.
+- Clinic branding/signage preserved as photographed.

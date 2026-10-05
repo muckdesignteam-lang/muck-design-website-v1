@@ -18,7 +18,7 @@ const projectData = [
     id: "home-renovation",
     category: "RESIDENTIAL · RENOVATION",
     title: "Home Renovation",
-    subtitle: "Passorn 8 Bang Yai · Nonthaburi",
+    subtitle: "Renovation & Built-In",
     image: "/images/projects/passorn-8-bang-yai/hero-finished.jpg",
     th: "รีโนเวทบ้านพักอาศัยเดิม โดยประสานงานงานก่อสร้าง วัสดุ งานติดตั้ง และงานเก็บรายละเอียดจนพร้อมใช้งาน",
     en: "Residential renovation with coordinated construction, material detailing, installation and finishing through completion."
@@ -26,11 +26,11 @@ const projectData = [
   {
     id: "commercial",
     category: "COMMERCIAL",
-    title: "Office / Retail Spaces",
-    subtitle: "Renovation & Built-in",
-    image: "/images/project-commercial.png",
-    th: "งานปรับปรุงและตกแต่งพื้นที่ธุรกิจ โดยคำนึงถึงฟังก์ชัน ภาพลักษณ์ของธุรกิจ ระบบประกอบอาคาร และการส่งมอบพร้อมใช้งาน",
-    en: "Commercial renovation and built-in work coordinated around function, brand environment, building services and handover."
+    title: "Commercial",
+    subtitle: "Dental Clinic · Chachoengsao",
+    image: "/images/projects/dental-clinic-chachoengsao/hero.jpg",
+    th: "งานรีโนเวทและตกแต่งภายในคลินิกทันตกรรมแบบ Turnkey โดยคำนึงถึงการวางผัง การใช้งาน งานระบบ ความปลอดภัย และสุขอนามัยของพื้นที่",
+    en: "Turnkey renovation and interior fit-out for a dental clinic, coordinated around planning, building services, safety and hygiene requirements."
   }
 ];
 
@@ -90,6 +90,8 @@ export default function ProjectsPage() {
                 ? <Link className="detailSoon detailReady" href="/projects/moden-rangsit-klong-4">VIEW PROJECT →</Link>
                 : project.id==="home-renovation"
                 ? <Link className="detailSoon detailReady" href="/projects/passorn-8-bang-yai">VIEW PROJECT →</Link>
+                : project.id==="commercial"
+                ? <Link className="detailSoon detailReady" href="/projects/dental-clinic-chachoengsao">VIEW PROJECT →</Link>
                 : <span className="detailSoon">{lang === "th" ? "PROJECT DETAIL — กำลังจัดทำ" : "PROJECT DETAIL — COMING NEXT"}</span>}
             </div>
           </article>
