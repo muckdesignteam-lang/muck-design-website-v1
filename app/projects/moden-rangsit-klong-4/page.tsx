@@ -58,7 +58,7 @@ export default function ModenRangsitProject(){
     <section className="projectHeroMeta">
       <div>
         <p className="eyebrow">RESIDENTIAL · NEW HOME</p>
-        <h1>MODEN RANGSIT<br/>KLONG 4</h1>
+        <h1>{lang==="th" ? <>โมเดน รังสิต<br/>คลอง 4</> : <>MODEN RANGSIT<br/>KLONG 4</>}</h1>
       </div>
       <div className="projectMetaGrid">
         <div><span>Category</span><strong>Design &amp; Built-in · New Home</strong></div>

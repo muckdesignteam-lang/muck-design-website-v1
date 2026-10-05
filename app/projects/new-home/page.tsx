@@ -8,7 +8,9 @@ const projects = [
   {
     number: "01",
     title: "Moden Rangsit Klong 4",
+    titleTh: "โมเดน รังสิต คลอง 4",
     location: "Pathum Thani",
+    locationTh: "ปทุมธานี",
     image: "/images/projects/moden-rangsit-klong-4/hero-finished13.jpg",
     href: "/projects/moden-rangsit-klong-4",
     ready: true,
@@ -16,7 +18,9 @@ const projects = [
   {
     number: "02",
     title: "Bangkok Boulevard Tiwanon-Rangsit",
+    titleTh: "บางกอก บูเลอวาร์ด ติวานนท์-รังสิต",
     location: "Pathum Thani",
+    locationTh: "ปทุมธานี",
     image: "/images/projects/bangkok-boulevard-tiwanon-rangsit/hero.jpg",
     href: "/projects/bangkok-boulevard-tiwanon-rangsit",
     ready: true,
@@ -24,7 +28,9 @@ const projects = [
   {
     number: "03",
     title: "Soi Ari 8",
+    titleTh: "ซอยอารีย์ 8",
     location: "Bangkok",
+    locationTh: "กรุงเทพฯ",
     image: null,
     href: "",
     ready: false,
@@ -32,7 +38,9 @@ const projects = [
   {
     number: "04",
     title: "Golden Neo Bangna–Suanluang",
+    titleTh: "โกลเด้น นีโอ บางนา-สวนหลวง",
     location: "Samut Prakan",
+    locationTh: "สมุทรปราการ",
     image: null,
     href: "",
     ready: false,
@@ -80,7 +88,7 @@ export default function NewHomeProjectsPage(){
               {project.image ? (
                 <Image
                   src={project.image}
-                  alt={project.title}
+                  alt={lang==="th" ? project.titleTh : project.title}
                   fill
                   quality={95}
                   sizes="(max-width: 900px) 100vw, 58vw"
@@ -96,8 +104,8 @@ export default function NewHomeProjectsPage(){
             <div className="overviewCopy">
               <span className="projectNumber">{project.number}</span>
               <p className="category">RESIDENTIAL · NEW HOME</p>
-              <h2>{project.title}</h2>
-              <p className="overviewSubtitle">{project.location} · Interior &amp; Built-in</p>
+              <h2>{lang==="th" ? project.titleTh : project.title}</h2>
+              <p className="overviewSubtitle">{lang==="th" ? project.locationTh : project.location} · Interior &amp; Built-in</p>
               <p className="overviewBody">
                 {lang==="th"
                   ? "งานออกแบบตกแต่งภายในและ Built-in สำหรับบ้านใหม่ โดยให้ความสำคัญกับการใช้งานจริง รายละเอียดวัสดุ และคุณภาพงานติดตั้ง"

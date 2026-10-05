@@ -59,7 +59,7 @@ export default function BangkokBoulevardProject(){
     <section className="projectHeroMeta">
       <div>
         <p className="eyebrow">RESIDENTIAL · NEW HOME</p>
-        <h1>BANGKOK BOULEVARD<br/>TIWANON-RANGSIT</h1>
+        <h1>{lang==="th" ? <>บางกอก บูเลอวาร์ด<br/>ติวานนท์-รังสิต</> : <>BANGKOK BOULEVARD<br/>TIWANON-RANGSIT</>}</h1>
       </div>
       <div className="projectMetaGrid">
         <div><span>Category</span><strong>Design &amp; Built-In · New Home</strong></div>

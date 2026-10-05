@@ -8,7 +8,7 @@ const projects = [
   {
     number: "01",
     title: "Passorn 8 Bang Yai",
-    titleTh: "Passorn 8 Bang Yai",
+    titleTh: "ภัสสร 8 บางใหญ่",
     location: "Nonthaburi · Renovation & Built-In",
     locationTh: "นนทบุรี · Renovation & Built-In",
     image: "/images/projects/passorn-8-bang-yai/hero-finished.jpg",

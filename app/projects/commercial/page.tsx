@@ -8,7 +8,7 @@ const projects = [
   {
     number: "01",
     title: "Dental Clinic",
-    titleTh: "Dental Clinic",
+    titleTh: "คลินิกทันตกรรม",
     location: "Chachoengsao · Turnkey Renovation & Interior Fit-out",
     locationTh: "ฉะเชิงเทรา · Turnkey Renovation & Interior Fit-out",
     image: "/images/projects/dental-clinic-chachoengsao/hero.jpg",
@@ -37,8 +37,8 @@ const projects = [
   },
   {
     number: "04",
-    title: "SSC · EST Booth",
-    titleTh: "SSC · ซุ้ม EST",
+    title: "est Booth",
+    titleTh: "ซุ้ม est",
     location: "Commercial Display / Booth",
     locationTh: "Commercial Display / Booth",
     image: null,

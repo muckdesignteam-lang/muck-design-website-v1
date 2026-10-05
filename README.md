@@ -67,3 +67,11 @@ V6 preserves the current typography, Thai default, layout, responsive behavior, 
 - Commercial category: Dental Clinic active; Base Fitness, Optical Store Bang Yai, and SSC · EST Booth placeholders.
 - Added Thai/English font and alignment handling with `lang` attributes.
 - Added tablet/mobile responsive category layouts; category cards collapse cleanly to one column.
+
+
+## V8.7.3 — TH/EN project-name consistency
+- Default TH mode now shows Thai-facing project names across category lists.
+- EN mode switches project names to English consistently.
+- Updated active detail-page headings where applicable.
+- Commercial Project 4 public name is now TH: ซุ้ม est / EN: est Booth.
+- Internal reference remains: Sermsuk - est Booth.

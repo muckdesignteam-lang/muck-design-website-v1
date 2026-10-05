@@ -42,7 +42,7 @@ export default function Passorn8BangYaiProject(){
     </header>
 
     <section className="projectHeroMeta">
-      <div><p className="eyebrow">RESIDENTIAL · RENOVATION</p><h1>PASSORN 8<br/>BANG YAI</h1></div>
+      <div><p className="eyebrow">RESIDENTIAL · RENOVATION</p><h1>{lang==="th" ? <>ภัสสร 8<br/>บางใหญ่</> : <>PASSORN 8<br/>BANG YAI</>}</h1></div>
       <div className="projectMetaGrid">
         <div><span>Category</span><strong>{lang==="th"?"งานรีโนเวทและก่อสร้าง · ที่อยู่อาศัย":"Renovation & Construction · Residential"}</strong></div>
         <div><span>Location</span><strong>{lang==="th"?"ภัสสร 8 บางใหญ่, นนทบุรี":"Passorn 8 Bang Yai, Nonthaburi"}</strong></div>
