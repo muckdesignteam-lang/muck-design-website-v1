@@ -1,0 +1,32 @@
+{
+  "project": "Bangkok Boulevard Tiwanon-Rangsit",
+  "category": "Residential · New Home",
+  "location": {
+    "en": "Pathum Thani",
+    "th": "ปทุมธานี"
+  },
+  "hero": "hero.jpg",
+  "finished": [
+    "finished-01.jpg",
+    "finished-02.jpg",
+    "finished-03.jpg",
+    "finished-04.jpg",
+    "finished-05.jpg",
+    "finished-06.jpg",
+    "finished-07.jpg"
+  ],
+  "details": [
+    "detail-01.jpg",
+    "detail-02.jpg",
+    "detail-03.jpg"
+  ],
+  "process": [
+    "process-01.jpg",
+    "process-02.jpg",
+    "process-03.jpg",
+    "process-04.jpg",
+    "process-05.jpg",
+    "process-06.jpg"
+  ],
+  "retouching": "Light correction only; preserve original photography and architecture."
+}

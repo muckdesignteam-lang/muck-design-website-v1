@@ -15,6 +15,15 @@ const projectData = [
     en: "Interior and built-in work for new homes, coordinated around practical use, detailing, materials and installation."
   },
   {
+    id: "new-home-02",
+    category: "RESIDENTIAL · NEW HOME",
+    title: "Bangkok Boulevard Tiwanon-Rangsit",
+    subtitle: "Pathum Thani · Interior & Built-in",
+    image: "/images/projects/bangkok-boulevard-tiwanon-rangsit/hero.jpg",
+    th: "งานออกแบบตกแต่งภายในและ Built-in แบบครบวงจร ตั้งแต่การออกแบบ วางผัง ผลิตเฟอร์นิเจอร์ ไปจนถึงติดตั้งและเก็บรายละเอียดจนพร้อมใช้งาน",
+    en: "Complete interior design and built-in work covering planning, furniture production, installation and final detailing."
+  },
+  {
     id: "home-renovation",
     category: "RESIDENTIAL · RENOVATION",
     title: "Home Renovation",
@@ -88,6 +97,8 @@ export default function ProjectsPage() {
               <p className="overviewBody">{lang === "th" ? project.th : project.en}</p>
               {project.id==="new-home"
                 ? <Link className="detailSoon detailReady" href="/projects/moden-rangsit-klong-4">VIEW PROJECT →</Link>
+                : project.id==="new-home-02"
+                ? <Link className="detailSoon detailReady" href="/projects/bangkok-boulevard-tiwanon-rangsit">VIEW PROJECT →</Link>
                 : project.id==="home-renovation"
                 ? <Link className="detailSoon detailReady" href="/projects/passorn-8-bang-yai">VIEW PROJECT →</Link>
                 : project.id==="commercial"
