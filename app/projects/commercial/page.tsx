@@ -7,39 +7,47 @@ import { useState } from "react";
 const projects = [
   {
     number: "01",
-    title: "Moden Rangsit Klong 4",
-    location: "Pathum Thani",
-    image: "/images/projects/moden-rangsit-klong-4/hero-finished13.jpg",
-    href: "/projects/moden-rangsit-klong-4",
+    title: "Dental Clinic",
+    titleTh: "Dental Clinic",
+    location: "Chachoengsao · Turnkey Renovation & Interior Fit-out",
+    locationTh: "ฉะเชิงเทรา · Turnkey Renovation & Interior Fit-out",
+    image: "/images/projects/dental-clinic-chachoengsao/hero.jpg",
+    href: "/projects/dental-clinic-chachoengsao",
     ready: true,
   },
   {
     number: "02",
-    title: "Bangkok Boulevard Tiwanon-Rangsit",
-    location: "Pathum Thani",
-    image: "/images/projects/bangkok-boulevard-tiwanon-rangsit/hero.jpg",
-    href: "/projects/bangkok-boulevard-tiwanon-rangsit",
-    ready: true,
+    title: "Base Fitness",
+    titleTh: "Base Fitness",
+    location: "Commercial Interior",
+    locationTh: "Commercial Interior",
+    image: null,
+    href: "",
+    ready: false,
   },
   {
     number: "03",
-    title: "Soi Ari 8",
-    location: "Bangkok",
+    title: "Optical Store Bang Yai",
+    titleTh: "ร้านแว่นตา บางใหญ่",
+    location: "Bang Yai · Retail Interior",
+    locationTh: "บางใหญ่ · Retail Interior",
     image: null,
     href: "",
     ready: false,
   },
   {
     number: "04",
-    title: "Golden Neo Bangna–Suanluang",
-    location: "Samut Prakan",
+    title: "SSC · EST Booth",
+    titleTh: "SSC · ซุ้ม EST",
+    location: "Commercial Display / Booth",
+    locationTh: "Commercial Display / Booth",
     image: null,
     href: "",
     ready: false,
-  },
+  }
 ];
 
-export default function NewHomeProjectsPage(){
+export default function CommercialProjectsPage(){
   const [lang,setLang]=useState<"th"|"en">("th");
 
   return (
@@ -63,18 +71,14 @@ export default function NewHomeProjectsPage(){
         </div>
       </header>
 
-      <section className="projectsIntro">
-        <p className="eyebrow">RESIDENTIAL · NEW HOME</p>
-        <h1>NEW HOME</h1>
-        <p>
-          {lang==="th"
-            ? "รวมผลงานออกแบบตกแต่งภายในและ Built-in สำหรับบ้านใหม่ ตั้งแต่การวางผัง ออกแบบ ผลิต และติดตั้งจนพร้อมใช้งาน"
-            : "Selected new-home projects covering interior planning, design, built-in production and installation."}
-        </p>
+      <section className="projectsIntro categoryIntro">
+        <p className="eyebrow">COMMERCIAL</p>
+        <h1>COMMERCIAL</h1>
+        <p>{lang==="th" ? "รวมผลงานพื้นที่เชิงพาณิชย์ ทั้งคลินิก ฟิตเนส ร้านค้า และพื้นที่จัดแสดง โดยคำนึงถึงฟังก์ชัน ภาพลักษณ์ งานระบบ และการใช้งานจริงของธุรกิจ" : "Selected commercial work across clinics, fitness, retail and display spaces, coordinated around function, brand environment, building services and practical operation."}</p>
       </section>
 
-      <section className="projectsOverview">
-        {projects.map((project,index)=>(
+      <section className="projectsOverview categoryProjectList">
+        {projects.map((project)=>(
           <article className="overviewProject" key={project.number}>
             <div className={"overviewImage" + (!project.image ? " categoryPlaceholder" : "")}>
               {project.image ? (
@@ -95,13 +99,13 @@ export default function NewHomeProjectsPage(){
 
             <div className="overviewCopy">
               <span className="projectNumber">{project.number}</span>
-              <p className="category">RESIDENTIAL · NEW HOME</p>
-              <h2>{project.title}</h2>
-              <p className="overviewSubtitle">{project.location} · Interior &amp; Built-in</p>
+              <p className="category">COMMERCIAL</p>
+              <h2>{lang==="th" ? project.titleTh : project.title}</h2>
+              <p className="overviewSubtitle">
+                {lang==="th" ? project.locationTh : project.location}
+              </p>
               <p className="overviewBody">
-                {lang==="th"
-                  ? "งานออกแบบตกแต่งภายในและ Built-in สำหรับบ้านใหม่ โดยให้ความสำคัญกับการใช้งานจริง รายละเอียดวัสดุ และคุณภาพงานติดตั้ง"
-                  : "Interior and built-in work for a new home, coordinated around practical use, material detailing and installation quality."}
+                {lang==="th" ? "งานออกแบบ รีโนเวท และ Built-in สำหรับพื้นที่ธุรกิจ โดยประสานฟังก์ชัน งานระบบ วัสดุ และรายละเอียดการติดตั้งให้เหมาะกับการใช้งานของแต่ละโครงการ" : "Commercial design, renovation and built-in work coordinated around function, building services, materials and installation requirements."}
               </p>
               {project.ready
                 ? <Link className="detailSoon detailReady" href={project.href}>VIEW PROJECT →</Link>
@@ -117,11 +121,9 @@ export default function NewHomeProjectsPage(){
           <h2>LET’S CREATE<br/>A SPACE THAT WORKS FOR YOU</h2>
         </div>
         <div>
-          <p>
-            {lang==="th"
-              ? "หากกำลังวางแผนบ้านใหม่ สามารถพูดคุยรายละเอียดและขอบเขตงานเบื้องต้นกับเราได้"
-              : "Planning a new home? Talk to us about the initial scope, design and built-in requirements."}
-          </p>
+          <p>{lang==="th"
+            ? "หากต้องการพูดคุยขอบเขตงานเบื้องต้นกับเรา สามารถติดต่อ MUCK Design ได้"
+            : "Talk to MUCK Design about the initial scope of your project."}</p>
           <a className="solidBtn" href="https://lin.ee/xMvkeiO" target="_blank" rel="noreferrer">TALK TO MUCK DESIGN</a>
         </div>
       </section>

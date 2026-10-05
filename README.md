@@ -59,3 +59,11 @@ V6 preserves the current typography, Thai default, layout, responsive behavior, 
 - New Home now links to `/projects/new-home`.
 - `/projects/new-home` lists Moden Rangsit Klong 4, Bangkok Boulevard Tiwanon-Rangsit, Soi Ari 8 and Golden Neo Bangna–Suanluang.
 - First two projects are active; Projects 3–4 remain clearly marked as coming next until their photography is ready.
+
+
+## V8.7.2 — Home Renovation & Commercial category structure
+- Main Projects page now links to category pages for all three categories.
+- Home Renovation category: Passorn 8 Bang Yai active; Theerin Phetkasem 48 placeholder.
+- Commercial category: Dental Clinic active; Base Fitness, Optical Store Bang Yai, and SSC · EST Booth placeholders.
+- Added Thai/English font and alignment handling with `lang` attributes.
+- Added tablet/mobile responsive category layouts; category cards collapse cleanly to one column.

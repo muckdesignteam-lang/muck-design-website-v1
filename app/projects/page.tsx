@@ -38,7 +38,7 @@ export default function ProjectsPage() {
   const [lang, setLang] = useState<"th"|"en">("th");
 
   return (
-    <main className="projectsPage">
+    <main className="projectsPage" lang={lang}>
       <header className="siteHeader">
         <Link className="brand" href="/" aria-label="MUCK Design home">
           <Image src="/logo/muck-logo.png" alt="MUCK Design" width={120} height={70} priority />
@@ -89,9 +89,9 @@ export default function ProjectsPage() {
               {project.id==="new-home"
                 ? <Link className="detailSoon detailReady" href="/projects/new-home">VIEW PROJECTS →</Link>
                 : project.id==="home-renovation"
-                ? <Link className="detailSoon detailReady" href="/projects/passorn-8-bang-yai">VIEW PROJECT →</Link>
+                ? <Link className="detailSoon detailReady" href="/projects/home-renovation">VIEW PROJECTS →</Link>
                 : project.id==="commercial"
-                ? <Link className="detailSoon detailReady" href="/projects/dental-clinic-chachoengsao">VIEW PROJECT →</Link>
+                ? <Link className="detailSoon detailReady" href="/projects/commercial">VIEW PROJECTS →</Link>
                 : <span className="detailSoon">{lang === "th" ? "PROJECT DETAIL — กำลังจัดทำ" : "PROJECT DETAIL — COMING NEXT"}</span>}
             </div>
           </article>

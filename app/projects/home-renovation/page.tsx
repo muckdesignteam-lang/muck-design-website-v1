@@ -7,39 +7,27 @@ import { useState } from "react";
 const projects = [
   {
     number: "01",
-    title: "Moden Rangsit Klong 4",
-    location: "Pathum Thani",
-    image: "/images/projects/moden-rangsit-klong-4/hero-finished13.jpg",
-    href: "/projects/moden-rangsit-klong-4",
+    title: "Passorn 8 Bang Yai",
+    titleTh: "Passorn 8 Bang Yai",
+    location: "Nonthaburi · Renovation & Built-In",
+    locationTh: "นนทบุรี · Renovation & Built-In",
+    image: "/images/projects/passorn-8-bang-yai/hero-finished.jpg",
+    href: "/projects/passorn-8-bang-yai",
     ready: true,
   },
   {
     number: "02",
-    title: "Bangkok Boulevard Tiwanon-Rangsit",
-    location: "Pathum Thani",
-    image: "/images/projects/bangkok-boulevard-tiwanon-rangsit/hero.jpg",
-    href: "/projects/bangkok-boulevard-tiwanon-rangsit",
-    ready: true,
-  },
-  {
-    number: "03",
-    title: "Soi Ari 8",
-    location: "Bangkok",
+    title: "Theerin Phetkasem 48",
+    titleTh: "ธีรินทร์ เพชรเกษม 48",
+    location: "Bangkok · Renovation & Built-In",
+    locationTh: "กรุงเทพฯ · Renovation & Built-In",
     image: null,
     href: "",
     ready: false,
-  },
-  {
-    number: "04",
-    title: "Golden Neo Bangna–Suanluang",
-    location: "Samut Prakan",
-    image: null,
-    href: "",
-    ready: false,
-  },
+  }
 ];
 
-export default function NewHomeProjectsPage(){
+export default function HomeRenovationProjectsPage(){
   const [lang,setLang]=useState<"th"|"en">("th");
 
   return (
@@ -63,18 +51,14 @@ export default function NewHomeProjectsPage(){
         </div>
       </header>
 
-      <section className="projectsIntro">
-        <p className="eyebrow">RESIDENTIAL · NEW HOME</p>
-        <h1>NEW HOME</h1>
-        <p>
-          {lang==="th"
-            ? "รวมผลงานออกแบบตกแต่งภายในและ Built-in สำหรับบ้านใหม่ ตั้งแต่การวางผัง ออกแบบ ผลิต และติดตั้งจนพร้อมใช้งาน"
-            : "Selected new-home projects covering interior planning, design, built-in production and installation."}
-        </p>
+      <section className="projectsIntro categoryIntro">
+        <p className="eyebrow">RESIDENTIAL · RENOVATION</p>
+        <h1>HOME RENOVATION</h1>
+        <p>{lang==="th" ? "รวมผลงานรีโนเวทบ้านพักอาศัย โดยประสานงานตั้งแต่การปรับพื้นที่ งานก่อสร้าง งานระบบ Built-in และงานเก็บรายละเอียดจนพร้อมใช้งาน" : "Selected residential renovation projects coordinated across construction, building services, built-in work and final finishing."}</p>
       </section>
 
-      <section className="projectsOverview">
-        {projects.map((project,index)=>(
+      <section className="projectsOverview categoryProjectList">
+        {projects.map((project)=>(
           <article className="overviewProject" key={project.number}>
             <div className={"overviewImage" + (!project.image ? " categoryPlaceholder" : "")}>
               {project.image ? (
@@ -95,13 +79,13 @@ export default function NewHomeProjectsPage(){
 
             <div className="overviewCopy">
               <span className="projectNumber">{project.number}</span>
-              <p className="category">RESIDENTIAL · NEW HOME</p>
-              <h2>{project.title}</h2>
-              <p className="overviewSubtitle">{project.location} · Interior &amp; Built-in</p>
+              <p className="category">RESIDENTIAL · RENOVATION</p>
+              <h2>{lang==="th" ? project.titleTh : project.title}</h2>
+              <p className="overviewSubtitle">
+                {lang==="th" ? project.locationTh : project.location}
+              </p>
               <p className="overviewBody">
-                {lang==="th"
-                  ? "งานออกแบบตกแต่งภายในและ Built-in สำหรับบ้านใหม่ โดยให้ความสำคัญกับการใช้งานจริง รายละเอียดวัสดุ และคุณภาพงานติดตั้ง"
-                  : "Interior and built-in work for a new home, coordinated around practical use, material detailing and installation quality."}
+                {lang==="th" ? "งานรีโนเวทและ Built-in ที่ให้ความสำคัญกับการใช้งานจริง การประสานงานหน้างาน และคุณภาพของรายละเอียดก่อนส่งมอบ" : "Residential renovation and built-in work focused on practical use, site coordination and quality detailing through completion."}
               </p>
               {project.ready
                 ? <Link className="detailSoon detailReady" href={project.href}>VIEW PROJECT →</Link>
@@ -117,11 +101,9 @@ export default function NewHomeProjectsPage(){
           <h2>LET’S CREATE<br/>A SPACE THAT WORKS FOR YOU</h2>
         </div>
         <div>
-          <p>
-            {lang==="th"
-              ? "หากกำลังวางแผนบ้านใหม่ สามารถพูดคุยรายละเอียดและขอบเขตงานเบื้องต้นกับเราได้"
-              : "Planning a new home? Talk to us about the initial scope, design and built-in requirements."}
-          </p>
+          <p>{lang==="th"
+            ? "หากต้องการพูดคุยขอบเขตงานเบื้องต้นกับเรา สามารถติดต่อ MUCK Design ได้"
+            : "Talk to MUCK Design about the initial scope of your project."}</p>
           <a className="solidBtn" href="https://lin.ee/xMvkeiO" target="_blank" rel="noreferrer">TALK TO MUCK DESIGN</a>
         </div>
       </section>

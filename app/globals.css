@@ -312,3 +312,99 @@
 .categoryPlaceholderInner{display:flex;flex-direction:column;gap:10px;align-items:center;justify-content:center;text-align:center;padding:30px;color:#7c766d}
 .categoryPlaceholderInner span{font-size:10px;letter-spacing:.15em}
 .categoryPlaceholderInner strong{font-size:13px;letter-spacing:.08em;font-weight:500}
+
+
+/* V8.7.2 — Category project pages: TH/EN alignment + mobile */
+.categoryProjectsPage .categoryIntro,
+.categoryProjectsPage .overviewCopy,
+.categoryProjectsPage .projectsCta,
+.categoryProjectsPage footer{
+  text-align:left;
+}
+.categoryProjectsPage[lang="th"] .categoryIntro>p:last-child,
+.categoryProjectsPage[lang="th"] .overviewBody,
+.categoryProjectsPage[lang="th"] .overviewSubtitle,
+.categoryProjectsPage[lang="th"] .categoryPlaceholderInner strong,
+.projectsPage[lang="th"] .projectsIntro>p:last-child,
+.projectsPage[lang="th"] .overviewBody{
+  font-family:var(--font-ibm-plex-thai),var(--font-manrope),sans-serif;
+}
+.categoryProjectsPage .overviewCopy h2{
+  text-wrap:balance;
+}
+.categoryProjectsPage .overviewSubtitle{
+  line-height:1.55;
+}
+.categoryProjectsPage .categoryProjectList .overviewProject{
+  align-items:stretch;
+}
+@media(max-width:900px){
+  .categoryProjectsPage .projectsIntro{
+    padding:58px 24px 44px;
+  }
+  .categoryProjectsPage .projectsIntro h1{
+    font-size:clamp(46px,12vw,72px);
+    line-height:.94;
+  }
+  .categoryProjectsPage .projectsOverview{
+    padding-inline:24px;
+  }
+  .categoryProjectsPage .overviewProject{
+    grid-template-columns:1fr;
+    min-height:0;
+  }
+  .categoryProjectsPage .overviewProject:nth-child(even) .overviewImage,
+  .categoryProjectsPage .overviewProject:nth-child(even) .overviewCopy{
+    order:initial;
+  }
+  .categoryProjectsPage .overviewImage{
+    min-height:0;
+    aspect-ratio:16/10;
+  }
+  .categoryProjectsPage .overviewCopy{
+    padding:34px 0 46px;
+  }
+  .categoryProjectsPage .overviewCopy h2{
+    font-size:clamp(32px,7vw,48px);
+    line-height:1.02;
+  }
+}
+@media(max-width:520px){
+  .categoryProjectsPage .projectsIntro{
+    padding:42px 18px 34px;
+  }
+  .categoryProjectsPage .projectsIntro h1{
+    font-size:42px;
+    letter-spacing:-.04em;
+  }
+  .categoryProjectsPage .projectsIntro>p:last-child{
+    font-size:14px;
+    line-height:1.7;
+  }
+  .categoryProjectsPage .projectsOverview{
+    padding-inline:18px;
+  }
+  .categoryProjectsPage .overviewImage{
+    aspect-ratio:4/3;
+  }
+  .categoryProjectsPage .overviewCopy{
+    padding:26px 0 38px;
+  }
+  .categoryProjectsPage .overviewCopy h2{
+    font-size:32px;
+    line-height:1.04;
+  }
+  .categoryProjectsPage .overviewSubtitle,
+  .categoryProjectsPage .overviewBody{
+    font-size:13px;
+    line-height:1.65;
+  }
+  .categoryProjectsPage .projectsCta{
+    grid-template-columns:1fr;
+    gap:22px;
+    padding:42px 18px;
+  }
+  .categoryProjectsPage footer{
+    padding-inline:18px;
+  }
+}
