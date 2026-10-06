@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { ProjectCTA, PROJECT_CATEGORY_COPY } from "./project-system";
 
 const projectData = [
   {
@@ -27,7 +28,7 @@ const projectData = [
     id: "commercial",
     category: "COMMERCIAL",
     title: "Commercial",
-    subtitle: "Dental Clinic · Chachoengsao",
+    subtitle: PROJECT_CATEGORY_COPY.commercial.subtitle,
     image: "/images/projects/dental-clinic-chachoengsao/hero.jpg",
     th: "งานรีโนเวทและตกแต่งภายในคลินิกทันตกรรมแบบ Turnkey โดยคำนึงถึงการวางผัง การใช้งาน งานระบบ ความปลอดภัย และสุขอนามัยของพื้นที่",
     en: "Turnkey renovation and interior fit-out for a dental clinic, coordinated around planning, building services, safety and hygiene requirements."
@@ -98,22 +99,7 @@ export default function ProjectsPage() {
         ))}
       </section>
 
-      <section className="projectsCta">
-        <div>
-          <p className="eyebrow">START A PROJECT</p>
-          <h2>LET’S CREATE<br/>A SPACE THAT WORKS FOR YOU</h2>
-        </div>
-        <div>
-          <p>
-            {lang === "th"
-              ? "หากกำลังวางแผนบ้านใหม่ ปรับปรุงพื้นที่เดิม หรือพื้นที่สำหรับธุรกิจ สามารถพูดคุยรายละเอียดเบื้องต้นกับเราได้"
-              : "Planning a new home, renovation or commercial space? Talk to us about the initial scope."}
-          </p>
-          <a className="solidBtn" href="https://lin.ee/xMvkeiO" target="_blank" rel="noreferrer">
-            TALK TO MUCK DESIGN
-          </a>
-        </div>
-      </section>
+      <ProjectCTA lang={lang} />
 
       <footer>
         <div>

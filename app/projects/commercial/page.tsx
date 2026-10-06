@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { ProjectCTA } from "../project-system";
 
 const projects = [
   {
@@ -115,18 +116,7 @@ export default function CommercialProjectsPage(){
         ))}
       </section>
 
-      <section className="projectsCta">
-        <div>
-          <p className="eyebrow">START A PROJECT</p>
-          <h2>LET’S CREATE<br/>A SPACE THAT WORKS FOR YOU</h2>
-        </div>
-        <div>
-          <p>{lang==="th"
-            ? "หากต้องการพูดคุยขอบเขตงานเบื้องต้นกับเรา สามารถติดต่อ MUCK Design ได้"
-            : "Talk to MUCK Design about the initial scope of your project."}</p>
-          <a className="solidBtn" href="https://lin.ee/xMvkeiO" target="_blank" rel="noreferrer">TALK TO MUCK DESIGN</a>
-        </div>
-      </section>
+      <ProjectCTA lang={lang} />
 
       <footer>
         <div>

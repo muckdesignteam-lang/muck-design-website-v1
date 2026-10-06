@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { ProjectCTA } from "../project-system";
 
 const finished = [
   ["/images/projects/moden-rangsit-klong-4/finished-kitchen.jpg","Kitchen"],
@@ -108,16 +109,7 @@ export default function ModenRangsitProject(){
       </div>
     </section>
 
-    <section className="projectsCta">
-      <div>
-        <p className="eyebrow">START A PROJECT</p>
-        <h2>LET’S CREATE<br/>A SPACE THAT WORKS FOR YOU</h2>
-      </div>
-      <div>
-        <p>{lang==="th" ? "ไม่ว่าจะเป็นบ้านใหม่ งานรีโนเวต หรือพื้นที่สำหรับธุรกิจ เราพร้อมให้คำปรึกษา ดูแล และประสานงานครบทุกขั้นตอน เพื่อส่งมอบพื้นที่ที่ตอบโจทย์ทั้งฟังก์ชันและไลฟ์สไตล์ของคุณ" : "Planning a new home, renovation or built-in project? Talk to us about the initial scope."}</p>
-        <a className="solidBtn" href="https://lin.ee/xMvkeiO" target="_blank" rel="noreferrer">TALK TO MUCK DESIGN</a>
-      </div>
-    </section>
+      <ProjectCTA lang={lang} />
 
     <footer>
       <div><span>Muck Design by BS&amp;P Beyond Home Design Co.,Ltd.</span><span>:</span><span>The Path to Better Living</span></div>

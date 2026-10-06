@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { ProjectCTA } from "../project-system";
 
 const finished = [
   ["/images/projects/dental-clinic-chachoengsao/finished-01.jpg","Reception"],
@@ -108,18 +109,7 @@ export default function DentalClinicProject(){
       </div>
     </section>
 
-    <section className="projectsCta">
-      <div>
-        <p className="eyebrow">START A PROJECT</p>
-        <h2>LET’S CREATE<br/>A SPACE THAT WORKS FOR YOU</h2>
-      </div>
-      <div>
-        <p>{lang==="th"
-          ?"หากกำลังวางแผนคลินิก สำนักงาน ร้านค้า หรือพื้นที่ธุรกิจ สามารถพูดคุยขอบเขตงานเบื้องต้นกับเราได้"
-          :"Planning a clinic, office, retail or other commercial space? Talk to us about the initial scope."}</p>
-        <a className="solidBtn" href="https://lin.ee/xMvkeiO" target="_blank" rel="noreferrer">TALK TO MUCK DESIGN</a>
-      </div>
-    </section>
+      <ProjectCTA lang={lang} />
 
     <footer>
       <div><span>Muck Design by BS&amp;P Beyond Home Design Co.,Ltd.</span><span>:</span><span>The Path to Better Living</span></div>

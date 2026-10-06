@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { ProjectCTA } from "../project-system";
 
 const projects = [
   {
@@ -119,18 +120,7 @@ export default function NewHomeProjectsPage(){
         ))}
       </section>
 
-      <section className="projectsCta">
-        <div>
-          <p className="eyebrow">START A PROJECT</p>
-          <h2>LET’S CREATE<br/>A SPACE THAT WORKS FOR YOU</h2>
-        </div>
-        <div>
-          <p>
-            {lang==="th" ? "ไม่ว่าจะเป็นบ้านใหม่ งานรีโนเวต หรือพื้นที่สำหรับธุรกิจ เราพร้อมให้คำปรึกษา ดูแล และประสานงานครบทุกขั้นตอน เพื่อส่งมอบพื้นที่ที่ตอบโจทย์ทั้งฟังก์ชันและไลฟ์สไตล์ของคุณ" : "Planning a new home? Talk to us about the initial scope, design and built-in requirements."}
-          </p>
-          <a className="solidBtn" href="https://lin.ee/xMvkeiO" target="_blank" rel="noreferrer">TALK TO MUCK DESIGN</a>
-        </div>
-      </section>
+      <ProjectCTA lang={lang} />
 
       <footer>
         <div>
