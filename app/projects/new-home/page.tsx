@@ -126,9 +126,7 @@ export default function NewHomeProjectsPage(){
         </div>
         <div>
           <p>
-            {lang==="th"
-              ? "หากกำลังวางแผนบ้านใหม่ สามารถพูดคุยรายละเอียดและขอบเขตงานเบื้องต้นกับเราได้"
-              : "Planning a new home? Talk to us about the initial scope, design and built-in requirements."}
+            {lang==="th" ? "ไม่ว่าจะเป็นบ้านใหม่ งานรีโนเวต หรือพื้นที่สำหรับธุรกิจ เราพร้อมให้คำปรึกษา ดูแล และประสานงานครบทุกขั้นตอน เพื่อส่งมอบพื้นที่ที่ตอบโจทย์ทั้งฟังก์ชันและไลฟ์สไตล์ของคุณ" : "Planning a new home? Talk to us about the initial scope, design and built-in requirements."}
           </p>
           <a className="solidBtn" href="https://lin.ee/xMvkeiO" target="_blank" rel="noreferrer">TALK TO MUCK DESIGN</a>
         </div>

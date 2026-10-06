@@ -35,7 +35,7 @@ export default function ModenRangsitProject(){
     ? "งานออกแบบตกแต่งภายในและ Built-in สำหรับบ้านใหม่ทั้งหลัง ครอบคลุมพื้นที่หลักทุกห้องทั้ง 2 ชั้น ตั้งแต่การวางผังและพัฒนาแบบ งานผลิต Built-in การติดตั้ง และการประสานงานจนโครงการแล้วเสร็จ"
     : "A whole-house interior design and built-in project covering both floors and all principal rooms. The scope included space planning, design development, built-in production, installation and coordination through project completion.";
 
-  return <main className="projectDetailPage">
+  return <main className="projectDetailPage" lang={lang}>
     <header className="siteHeader">
       <Link className="brand" href="/" aria-label="MUCK Design home">
         <Image src="/logo/muck-logo.png" alt="MUCK Design" width={120} height={70} priority />
@@ -114,9 +114,7 @@ export default function ModenRangsitProject(){
         <h2>LET’S CREATE<br/>A SPACE THAT WORKS FOR YOU</h2>
       </div>
       <div>
-        <p>{lang==="th"
-          ?"หากกำลังวางแผนบ้านใหม่ งานรีโนเวท หรือ Built-in สามารถพูดคุยขอบเขตงานเบื้องต้นกับเราได้"
-          :"Planning a new home, renovation or built-in project? Talk to us about the initial scope."}</p>
+        <p>{lang==="th" ? "ไม่ว่าจะเป็นบ้านใหม่ งานรีโนเวต หรือพื้นที่สำหรับธุรกิจ เราพร้อมให้คำปรึกษา ดูแล และประสานงานครบทุกขั้นตอน เพื่อส่งมอบพื้นที่ที่ตอบโจทย์ทั้งฟังก์ชันและไลฟ์สไตล์ของคุณ" : "Planning a new home, renovation or built-in project? Talk to us about the initial scope."}</p>
         <a className="solidBtn" href="https://lin.ee/xMvkeiO" target="_blank" rel="noreferrer">TALK TO MUCK DESIGN</a>
       </div>
     </section>

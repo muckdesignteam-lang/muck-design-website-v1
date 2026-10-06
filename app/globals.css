@@ -408,3 +408,36 @@
     padding-inline:18px;
   }
 }
+
+
+/* V8.7.4 — Thai project-title scale refinement */
+.categoryProjectsPage[lang="th"] .overviewCopy h2{
+  font-size:clamp(32px,3.35vw,52px);
+  line-height:1.08;
+  letter-spacing:-.025em;
+}
+.projectDetailPage[lang="th"] .projectHeroMeta h1{
+  font-family:var(--font-ibm-plex-thai),var(--font-manrope),sans-serif;
+  font-size:clamp(42px,5.2vw,80px);
+  line-height:1.05;
+  letter-spacing:-.025em;
+  font-weight:600;
+}
+@media(max-width:900px){
+  .categoryProjectsPage[lang="th"] .overviewCopy h2{
+    font-size:clamp(30px,6vw,44px);
+  }
+  .projectDetailPage[lang="th"] .projectHeroMeta h1{
+    font-size:clamp(38px,8vw,58px);
+  }
+}
+@media(max-width:520px){
+  .categoryProjectsPage[lang="th"] .overviewCopy h2{
+    font-size:30px;
+    line-height:1.12;
+  }
+  .projectDetailPage[lang="th"] .projectHeroMeta h1{
+    font-size:38px;
+    line-height:1.08;
+  }
+}

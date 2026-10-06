@@ -75,3 +75,11 @@ V6 preserves the current typography, Thai default, layout, responsive behavior, 
 - Updated active detail-page headings where applicable.
 - Commercial Project 4 public name is now TH: ซุ้ม est / EN: est Booth.
 - Internal reference remains: Sermsuk - est Booth.
+
+
+## V8.7.4 — New Home / Home Renovation consistency
+- Reduced Thai project-title scale on category and active detail pages.
+- Unified TH CTA wording for homepage, New Home and Home Renovation:
+  ไม่ว่าจะเป็นบ้านใหม่ งานรีโนเวต หรือพื้นที่สำหรับธุรกิจ เราพร้อมให้คำปรึกษา ดูแล และประสานงานครบทุกขั้นตอน เพื่อส่งมอบพื้นที่ที่ตอบโจทย์ทั้งฟังก์ชันและไลฟ์สไตล์ของคุณ
+- Homepage Selected Projects cards now all link to `/projects`, same as EXPLORE PROJECTS / VIEW ALL PROJECTS.
+- Commercial category/page content was left unchanged.

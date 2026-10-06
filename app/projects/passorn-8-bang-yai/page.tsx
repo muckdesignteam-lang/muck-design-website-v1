@@ -34,7 +34,7 @@ export default function Passorn8BangYaiProject(){
     ? "โครงการรีโนเวทบ้านพักอาศัยเดิม เพื่อปรับพื้นที่และงานก่อสร้างให้เหมาะกับการใช้งานใหม่ พร้อมประสานงานรายละเอียดหน้างาน วัสดุ งานติดตั้ง และงานเก็บรายละเอียดจนพร้อมใช้งาน"
     : "A residential renovation project upgrading the existing home for renewed use, with coordinated construction, material detailing, installation and finishing through completion.";
 
-  return <main className="projectDetailPage">
+  return <main className="projectDetailPage" lang={lang}>
     <header className="siteHeader">
       <Link className="brand" href="/" aria-label="MUCK Design home"><Image src="/logo/muck-logo.png" alt="MUCK Design" width={120} height={70} priority /></Link>
       <nav><Link href="/projects">Projects</Link><Link href="/#services">Services</Link><Link href="/#process">How We Work</Link><Link href="/#about">About</Link><Link href="/#contact">Contact</Link></nav>
@@ -67,7 +67,7 @@ export default function Passorn8BangYaiProject(){
       <div className="processGrid">{process.map(([src,alt])=><figure key={src}><div className="processFrame"><Image src={src} alt={alt} fill quality={92} sizes="(max-width:900px) 100vw, 33vw"/></div></figure>)}</div>
     </section>
 
-    <section className="projectsCta"><div><p className="eyebrow">START A PROJECT</p><h2>LET’S CREATE<br/>A SPACE THAT WORKS FOR YOU</h2></div><div><p>{lang==="th"?"หากกำลังวางแผนรีโนเวทบ้าน ปรับปรุงพื้นที่เดิม หรือ Built-in สามารถพูดคุยขอบเขตงานเบื้องต้นกับเราได้":"Planning a home renovation, upgrade or built-in project? Talk to us about the initial scope."}</p><a className="solidBtn" href="https://lin.ee/xMvkeiO" target="_blank" rel="noreferrer">TALK TO MUCK DESIGN</a></div></section>
+    <section className="projectsCta"><div><p className="eyebrow">START A PROJECT</p><h2>LET’S CREATE<br/>A SPACE THAT WORKS FOR YOU</h2></div><div><p>{lang==="th" ? "ไม่ว่าจะเป็นบ้านใหม่ งานรีโนเวต หรือพื้นที่สำหรับธุรกิจ เราพร้อมให้คำปรึกษา ดูแล และประสานงานครบทุกขั้นตอน เพื่อส่งมอบพื้นที่ที่ตอบโจทย์ทั้งฟังก์ชันและไลฟ์สไตล์ของคุณ" : "Planning a home renovation, upgrade or built-in project? Talk to us about the initial scope."}</p><a className="solidBtn" href="https://lin.ee/xMvkeiO" target="_blank" rel="noreferrer">TALK TO MUCK DESIGN</a></div></section>
 
     <footer><div><span>Muck Design by BS&amp;P Beyond Home Design Co.,Ltd.</span><span>:</span><span>The Path to Better Living</span></div><Link href="/projects">← BACK TO PROJECTS</Link></footer>
   </main>

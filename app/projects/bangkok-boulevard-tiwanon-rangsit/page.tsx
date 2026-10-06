@@ -36,7 +36,7 @@ export default function BangkokBoulevardProject(){
     ? "งานออกแบบตกแต่งภายในและ Built-in แบบครบวงจร ตั้งแต่การออกแบบและวางผังพื้นที่ การผลิตเฟอร์นิเจอร์ Built-in ไปจนถึงการติดตั้งและเก็บรายละเอียดจนแล้วเสร็จ เพื่อให้ทุกพื้นที่สวยงาม ลงตัว และตอบโจทย์การใช้งานจริงในชีวิตประจำวัน"
     : "A complete interior design and built-in service for a new home, covering space planning, design development, furniture production, installation and final detailing to create a cohesive, refined and practical living environment.";
 
-  return <main className="projectDetailPage">
+  return <main className="projectDetailPage" lang={lang}>
     <header className="siteHeader">
       <Link className="brand" href="/" aria-label="MUCK Design home">
         <Image src="/logo/muck-logo.png" alt="MUCK Design" width={120} height={70} priority />
@@ -115,9 +115,7 @@ export default function BangkokBoulevardProject(){
         <h2>LET’S CREATE<br/>A SPACE THAT WORKS FOR YOU</h2>
       </div>
       <div>
-        <p>{lang==="th"
-          ?"หากกำลังวางแผนบ้านใหม่ หรือต้องการงานออกแบบและ Built-in แบบครบวงจร สามารถพูดคุยขอบเขตงานเบื้องต้นกับเราได้"
-          :"Planning a new home or a complete interior and built-in project? Talk to us about the initial scope."}</p>
+        <p>{lang==="th" ? "ไม่ว่าจะเป็นบ้านใหม่ งานรีโนเวต หรือพื้นที่สำหรับธุรกิจ เราพร้อมให้คำปรึกษา ดูแล และประสานงานครบทุกขั้นตอน เพื่อส่งมอบพื้นที่ที่ตอบโจทย์ทั้งฟังก์ชันและไลฟ์สไตล์ของคุณ" : "Planning a new home or a complete interior and built-in project? Talk to us about the initial scope."}</p>
         <a className="solidBtn" href="https://lin.ee/xMvkeiO" target="_blank" rel="noreferrer">TALK TO MUCK DESIGN</a>
       </div>
     </section>
