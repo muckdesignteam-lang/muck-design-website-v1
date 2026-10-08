@@ -492,3 +492,17 @@
   .categoryProjectsPage[lang="th"] .overviewCopy h2{font-size:28px;line-height:1.14}
   .projectDetailPage[lang="th"] .projectHeroMeta h1{font-size:34px;line-height:1.12}
 }
+
+.privacyFooterLink{color:inherit;text-decoration:none;font-size:12px;opacity:.78;white-space:nowrap}
+.privacyFooterLink:hover{text-decoration:underline;opacity:1}
+.privacyPage{min-height:100vh;background:#f9f9f6;color:#252525;font-family:var(--font-ibm-plex-thai),sans-serif}
+.privacyHeader,.privacyBottom{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:24px clamp(20px,5vw,78px);border-bottom:1px solid #e3e3df;font-size:13px}
+.privacyHeader a,.privacyBottom a,.privacyContent a{color:inherit}
+.privacyHeader span{letter-spacing:.16em;font-family:var(--font-manrope),sans-serif;font-size:11px}
+.privacyContent{max-width:850px;margin:auto;padding:60px 24px 85px;font-size:16px;line-height:1.9}
+.privacyContent h1{font-size:clamp(30px,4vw,48px);line-height:1.3;margin:10px 0 8px}
+.privacyContent h2{font-size:20px;margin:38px 0 10px;line-height:1.4}
+.privacyContent p{margin:12px 0;color:#444}
+.privacyEyebrow{font-family:var(--font-manrope),sans-serif;font-size:11px!important;letter-spacing:.14em}
+.privacySubtitle{font-size:15px;color:#777!important;margin-bottom:34px!important}
+.privacyBottom{border-top:1px solid #e3e3df;border-bottom:0;color:#666}

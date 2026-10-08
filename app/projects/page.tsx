@@ -30,8 +30,8 @@ const projectData = [
     title: "Commercial",
     subtitle: PROJECT_CATEGORY_COPY.commercial.subtitle,
     image: "/images/projects/dental-clinic-chachoengsao/hero.jpg",
-    th: "งานรีโนเวทและตกแต่งภายในคลินิกทันตกรรมแบบ Turnkey โดยคำนึงถึงการวางผัง การใช้งาน งานระบบ ความปลอดภัย และสุขอนามัยของพื้นที่",
-    en: "Turnkey renovation and interior fit-out for a dental clinic, coordinated around planning, building services, safety and hygiene requirements."
+    th: PROJECT_CATEGORY_COPY.commercial.descriptionTh,
+    en: PROJECT_CATEGORY_COPY.commercial.descriptionEn
   }
 ];
 

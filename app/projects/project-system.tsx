@@ -4,6 +4,8 @@ export const PROJECT_CATEGORY_COPY = {
   commercial: {
     title: "Commercial",
     subtitle: "Interior, Built-In and Renovation",
+    descriptionTh: "งานออกแบบ รีโนเวท และ Built-in สำหรับพื้นที่ธุรกิจ โดยประสานฟังก์ชัน งานระบบ วัสดุ และรายละเอียดการติดตั้งให้เหมาะกับการใช้งานของแต่ละโครงการ",
+    descriptionEn: "Design, renovation and built-in services for commercial spaces, coordinating function, building services, materials and installation details to suit each project's operational requirements.",
   },
 } as const;
 

@@ -12,6 +12,8 @@ const projects = [
     titleTh: "คลินิกทันตกรรม",
     location: "Chachoengsao · Turnkey Renovation & Interior Fit-out",
     locationTh: "ฉะเชิงเทรา · Turnkey Renovation & Interior Fit-out",
+    descriptionEn: "Turnkey renovation and interior fit-out for a dental clinic, coordinated around planning, building services, safety and hygiene requirements.",
+    descriptionTh: "งานรีโนเวทและตกแต่งภายในคลินิกทันตกรรมแบบ Turnkey โดยคำนึงถึงการวางผัง การใช้งาน งานระบบ ความปลอดภัย และสุขอนามัยของพื้นที่",
     image: "/images/projects/dental-clinic-chachoengsao/hero.jpg",
     href: "/projects/dental-clinic-chachoengsao",
     ready: true,
@@ -20,8 +22,20 @@ const projects = [
     number: "02",
     title: "Base Fitness",
     titleTh: "Base Fitness",
-    location: "Commercial Interior",
-    locationTh: "Commercial Interior",
+    location: "Maintenance & Facility Improvement",
+    locationTh: "งานซ่อมบำรุง ปรับปรุงพื้นที่ และงานช่างทั่วไป",
+    descriptionEn: "General maintenance, facility improvement, and technical works for fitness facilities.",
+    descriptionTh: "งานดูแลซ่อมบำรุงและปรับปรุงพื้นที่ฟิตเนส รวมถึงงานก่อสร้างห้องเก็บของ ผลิตและติดตั้งป้ายไฟ และงานช่างอื่น ๆ ตามความต้องการของหน้างาน",
+    projectDetailsTh: [
+      "งานก่อสร้างห้องเก็บของ",
+      "ผลิตและติดตั้งป้ายไฟ",
+      "งานช่างและงานปรับปรุงอื่น ๆ ตามหน้างาน",
+    ],
+    projectDetailsEn: [
+      "Construction of a storage room",
+      "Fabrication and installation of illuminated signage",
+      "General technical works and on-site improvements as required",
+    ],
     image: null,
     href: "",
     ready: false,
@@ -32,6 +46,8 @@ const projects = [
     titleTh: "ร้านแว่นตา บางใหญ่",
     location: "Bang Yai · Retail Interior",
     locationTh: "บางใหญ่ · Retail Interior",
+    descriptionEn: "Project-specific scope and details will be added together with the project images.",
+    descriptionTh: "รายละเอียดขอบเขตงานของโครงการจะอัปเดตพร้อมภาพโครงการ",
     image: null,
     href: "",
     ready: false,
@@ -42,6 +58,8 @@ const projects = [
     titleTh: "ซุ้ม est",
     location: "Commercial Display / Booth",
     locationTh: "Commercial Display / Booth",
+    descriptionEn: "Project-specific scope and details will be added together with the project images.",
+    descriptionTh: "รายละเอียดขอบเขตงานของโครงการจะอัปเดตพร้อมภาพโครงการ",
     image: null,
     href: "",
     ready: false,
@@ -106,7 +124,7 @@ export default function CommercialProjectsPage(){
                 {lang==="th" ? project.locationTh : project.location}
               </p>
               <p className="overviewBody">
-                {lang==="th" ? "งานออกแบบ รีโนเวท และ Built-in สำหรับพื้นที่ธุรกิจ โดยประสานฟังก์ชัน งานระบบ วัสดุ และรายละเอียดการติดตั้งให้เหมาะกับการใช้งานของแต่ละโครงการ" : "Commercial design, renovation and built-in work coordinated around function, building services, materials and installation requirements."}
+                {lang==="th" ? project.descriptionTh : project.descriptionEn}
               </p>
               {project.ready
                 ? <Link className="detailSoon detailReady" href={project.href}>VIEW PROJECT →</Link>
