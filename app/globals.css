@@ -506,3 +506,7 @@
 .privacyEyebrow{font-family:var(--font-manrope),sans-serif;font-size:11px!important;letter-spacing:.14em}
 .privacySubtitle{font-size:15px;color:#777!important;margin-bottom:34px!important}
 .privacyBottom{border-top:1px solid #e3e3df;border-bottom:0;color:#666}
+
+/* V8.8.1 mobile-only portfolio entry */
+.mobileHeroCta{display:none!important}
+@media(max-width:700px){.desktopHeroCta{display:none!important}.mobileHeroCta{display:inline-flex!important}}
