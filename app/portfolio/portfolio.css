@@ -25,9 +25,6 @@
 .pfCardMeta{display:block;margin-top:10px;font-size:11px;letter-spacing:.2em;color:#5E6A55;text-transform:uppercase}
 .pfBtn{display:inline-block;border:1px solid #2A2823;padding:16px 34px;font-size:12px;letter-spacing:.2em;transition:background .25s,color .25s}
 .pfBtn:hover{background:#2A2823;color:#EEEBE5}
-.pfCta{background:#B7BDAE;text-align:center;padding:clamp(72px,9vw,120px) 22px}
-.pfCtaKicker{font-size:11px;letter-spacing:.3em;color:#3F4A38;margin:0 0 22px;font-weight:600}
-.pfCta h2{font-size:clamp(26px,3.6vw,46px);font-weight:300;letter-spacing:.08em;line-height:1.3;margin:0 auto 38px;max-width:760px}
 .pfFooter{background:#2A2823;color:#EEEBE5;display:flex;flex-wrap:wrap;gap:22px;justify-content:space-between;padding:25px clamp(22px,5vw,82px);font-size:12px}
 .pfModal{position:fixed;inset:0;z-index:50;background:rgba(42,40,35,.55);overflow-y:auto;overscroll-behavior:contain}
 .pfModalPanel{position:relative;background:#EEEBE5;max-width:1240px;margin:clamp(0px,3vw,36px) auto;padding:clamp(56px,6vw,84px) clamp(20px,4vw,64px) 56px;min-height:100%}
@@ -41,3 +38,19 @@
 .pfModalFoot{text-align:center;padding-top:48px}
 @media(max-width:1100px){.pfGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.pfModalGrid{columns:2}}
 @media(max-width:700px){.pfHeader{padding-top:22px}.pfHeader nav{gap:6px 22px;font-size:11px}.pfGrid{grid-template-columns:1fr;gap:44px}.pfModalGrid{columns:1}.pfModalPanel{margin:0}}
+.pfExplore{text-align:center;padding:0 22px clamp(72px,9vw,112px)}
+.pfExplore p{font-size:12px;letter-spacing:.18em;color:#6B665C;margin:0 0 24px}
+.pfAllGrid{max-width:1560px;margin:0 auto;padding:0 clamp(14px,2vw,28px) 72px;columns:3;column-gap:12px}
+.pfAllItem{display:block;width:100%;break-inside:avoid;margin:0 0 22px;padding:0;border:0;background:transparent;text-align:left;cursor:pointer;font:inherit;color:inherit}
+.pfAllItem img{display:block;width:100%;height:auto;background:#D6D1C7;transition:opacity .3s}
+@media(hover:hover){.pfAllItem:hover img{opacity:.88}}
+.pfAllItem:focus-visible{outline:2px solid #5E6A55;outline-offset:4px}
+.pfAllCaption{display:block;margin-top:9px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#4A463F}
+.pfLightbox{position:fixed;inset:0;z-index:60;background:rgba(30,29,26,.94);display:flex;align-items:center;justify-content:center}
+.pfLbStage{position:relative;width:min(88vw,1500px);height:84vh}
+.pfLbClose{position:absolute;top:14px;right:14px;z-index:2;background:transparent;color:#EEEBE5;border:1px solid rgba(238,235,229,.5);font:inherit;font-size:12px;letter-spacing:.18em;padding:12px 18px;cursor:pointer;min-height:44px}
+.pfLbNav{position:absolute;top:50%;transform:translateY(-50%);z-index:2;background:transparent;color:#EEEBE5;border:0;font-size:54px;line-height:1;width:64px;height:88px;cursor:pointer}
+.pfLbNav.prev{left:6px}.pfLbNav.next{right:6px}
+.pfLbCaption{position:absolute;bottom:16px;left:0;right:0;text-align:center;color:#D9D5CB;font-size:12px;letter-spacing:.18em;margin:0;text-transform:uppercase}
+@media(max-width:1100px){.pfAllGrid{columns:2}}
+@media(max-width:700px){.pfAllGrid{columns:1}.pfLbStage{width:100vw;height:76vh}.pfLbNav{width:48px;font-size:44px}}
