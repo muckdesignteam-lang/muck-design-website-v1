@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./portfolio.css";
 
 type Group = "residential" | "commercial";
@@ -384,17 +384,74 @@ const imageDimensions: Record<string, [number, number]> = {
   ]
 };
 
-const featuredOrder = ["moden", "ai", "optic-shop", "soi-aree-8", "golden-neo", "dental"];
-const featuredProjects = featuredOrder.map((id) => projects.find((p) => p.id === id)!).filter(Boolean);
+type Filter = "all" | Group;
 
+const copy = {
+  th: {
+    kicker: "MUCK DESIGN / ผลงานของเรา",
+    intro:
+      "ผลงานที่คัดสรรจากบ้านและพื้นที่ธุรกิจ ทั้งงานออกแบบ ก่อสร้าง รีโนเวท และบิลต์อิน ที่ออกแบบให้สวยงามและใช้งานได้จริงในทุกวัน",
+    filters: { all: "ทั้งหมด", residential: "บ้านพักอาศัย", commercial: "เชิงพาณิชย์" },
+    view: "ดูโครงการ",
+    close: "ปิด",
+    ctaKicker: "เริ่มต้นโครงการ",
+    ctaTitle: "พร้อมสร้างบ้านในฝันของคุณหรือยัง?",
+    ctaBtn: "คุยกับ MUCK DESIGN",
+    privacy: "นโยบายความเป็นส่วนตัว",
+  },
+  en: {
+    kicker: "MUCK DESIGN / OUR WORK",
+    intro:
+      "A curated selection of residential and commercial work: design, construction, renovation and built-in, made to look beautiful and work well every day.",
+    filters: { all: "All", residential: "Residential", commercial: "Commercial" },
+    view: "View project",
+    close: "Close",
+    ctaKicker: "START A PROJECT",
+    ctaTitle: "Ready to create your dream space?",
+    ctaBtn: "TALK TO MUCK DESIGN",
+    privacy: "Privacy Policy",
+  },
+} as const;
+
+const LINE_URL = "https://lin.ee/xMvkeiO";
 
 export default function PortfolioPage() {
   const [lang, setLang] = useState<"th" | "en">("th");
+  const [filter, setFilter] = useState<Filter>("all");
+  const [openId, setOpenId] = useState<string | null>(null);
+  const closeRef = useRef<HTMLButtonElement>(null);
+  const lastFocus = useRef<HTMLElement | null>(null);
+  const t = copy[lang];
+
+  const visible = filter === "all" ? projects : projects.filter((p) => p.group === filter);
+  const active = projects.find((p) => p.id === openId) ?? null;
+  const nameOf = (p: Project) => (lang === "th" ? p.th : p.en);
+
+  useEffect(() => {
+    if (!openId) return;
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    closeRef.current?.focus();
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpenId(null);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = prevOverflow;
+      window.removeEventListener("keydown", onKey);
+      lastFocus.current?.focus();
+    };
+  }, [openId]);
+
+  const openProject = (id: string, el: HTMLElement) => {
+    lastFocus.current = el;
+    setOpenId(id);
+  };
 
   return (
-    <main className="portfolioPage" lang={lang}>
-      <header className="portfolioHeader">
-        <Link href="/" aria-label="MUCK Design home" className="portfolioBrand">
+    <main className="pfPage" lang={lang}>
+      <header className="pfHeader">
+        <Link href="/" aria-label="MUCK Design home" className="pfBrand">
           <Image src="/logo/muck-logo.png" width={116} height={68} alt="MUCK Design" priority />
         </Link>
         <nav aria-label="Main navigation">
@@ -404,112 +461,105 @@ export default function PortfolioPage() {
             Portfolio
           </Link>
           <Link href="/#contact">Contact</Link>
+          <button className="pfLang" onClick={() => setLang(lang === "th" ? "en" : "th")}>
+            {lang === "th" ? "EN | TH" : "TH | EN"}
+          </button>
         </nav>
-        <button className="portfolioLang" onClick={() => setLang(lang === "th" ? "en" : "th")}>
-          {lang === "th" ? "EN | TH" : "TH | EN"}
-        </button>
       </header>
 
-      <div className="portfolioInner">
-        <section className="portfolioIntro">
-          <p className="portfolioKicker">MUCK DESIGN / {lang === "th" ? "ผลงานของเรา" : "OUR WORK"}</p>
-          <h1>Spaces, thoughtfully made.</h1>
-          <p>
-            {lang === "th"
-              ? "รวมผลงานบ้านและพื้นที่ธุรกิจที่ MUCK Design ออกแบบ ก่อสร้าง รีโนเวท และผลิตงานบิลต์อิน โดยคัดเลือกภาพเด่นไว้ด้านบน และรวมภาพทั้งหมดไว้ในหน้าพอร์ตโฟลิโอด้านล่าง"
-              : "A curated collection of residential and commercial work by MUCK Design, with selected covers above and the full portfolio gathered below in one continuous gallery."}
-          </p>
-        </section>
+      <section className="pfIntro">
+        <p className="pfKicker">{t.kicker}</p>
+        <h1>PORTFOLIO</h1>
+        <p className="pfIntroText">{t.intro}</p>
+      </section>
 
-        <section className="portfolioFeaturedSection" aria-labelledby="selected-works-title">
-          <div className="portfolioSectionHead">
-            <div>
-              <p className="portfolioKicker">SELECTED WORKS</p>
-              <h2 id="selected-works-title">{lang === "th" ? "โครงการเด่น" : "Featured Projects"}</h2>
-            </div>
-          </div>
-
-          <div className="portfolioFeaturedGrid">
-            {featuredProjects.map((project) => (
-              <a className="portfolioFeaturedCard" href={`#portfolio-project-${project.id}`} key={project.id} aria-label={`${lang === "th" ? project.th : project.en}: ${lang === "th" ? "ดูภาพโครงการ" : "View project photos"}`}>
-                <div className="portfolioFeaturedImage">
-                  <Image
-                    src={project.cover}
-                    alt={lang === "th" ? project.th : project.en}
-                    fill
-                    sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw"
-                    priority
-                  />
-                </div>
-                <div className="portfolioFeaturedInfo">
-                  <p className="portfolioNumber">{project.group === "residential" ? "RESIDENTIAL" : "COMMERCIAL"}</p>
-                  <h3>{lang === "th" ? project.th : project.en}</h3>
-                  <p>{project.subtitle}</p>
-                </div>
-              </a>
-            ))}
-          </div>
-          <div className="portfolioExploreRow">
-            <a href="#portfolio-all" className="portfolioAnchorBtn">
-              {lang === "th" ? "ชมพอร์ตโฟลิโอทั้งหมด" : "EXPLORE OUR PORTFOLIO"} <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-        </section>
-
-        <section className="portfolioAllSection" id="portfolio-all" aria-labelledby="portfolio-all-title">
-          <div className="portfolioSectionHead portfolioSectionHeadTight">
-            <div>
-              <p className="portfolioKicker">FULL PORTFOLIO</p>
-              <h2 id="portfolio-all-title">{lang === "th" ? "ผลงานทั้งหมด" : "All Project Photos"}</h2>
-            </div>
-          </div>
-
-          <div className="portfolioProjectList">
-            {projects.map((project, projectIndex) => (
-              <article className="portfolioProjectBlock" id={`portfolio-project-${project.id}`} key={project.id}>
-                <div className="portfolioProjectHeader">
-                  <div>
-                    <p className="portfolioNumber">
-                      {String(projectIndex + 1).padStart(2, "0")} / {project.group === "residential" ? "RESIDENTIAL" : "COMMERCIAL"}
-                    </p>
-                    <h3>{lang === "th" ? project.th : project.en}</h3>
-                    <p>{project.subtitle}</p>
-                  </div>
-                  <span className="portfolioProjectMeta">{project.meta}</span>
-                </div>
-
-                <div className="portfolioMosaicGrid">
-                  {project.images.map((src, imageIndex) => (
-                    <figure className="portfolioMosaicItem" key={src}>
-                      <Image
-                        src={src}
-                        alt={`${lang === "th" ? project.th : project.en} — ${imageIndex + 1}`}
-                        width={imageDimensions[src]?.[0] ?? 1200}
-                        height={imageDimensions[src]?.[1] ?? 900}
-                        sizes="(max-width: 700px) 100vw, (max-width: 900px) 50vw, 33vw"
-                        loading="lazy"
-                      />
-                    </figure>
-                  ))}
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="portfolioEnd">
-          <p>{lang === "th" ? "สนใจเริ่มต้นโครงการกับเรา" : "Have a space in mind?"}</p>
-          <a href="https://lin.ee/xMvkeiO" target="_blank" rel="noreferrer">
-            TALK TO MUCK DESIGN ↗
-          </a>
-        </section>
+      <div className="pfFilters" role="tablist" aria-label="Project categories">
+        {(["all", "residential", "commercial"] as Filter[]).map((f) => (
+          <button
+            key={f}
+            role="tab"
+            aria-selected={filter === f}
+            className={filter === f ? "pfChip on" : "pfChip"}
+            onClick={() => setFilter(f)}
+          >
+            {t.filters[f]}
+          </button>
+        ))}
       </div>
 
-      <footer className="portfolioFooter">
+      <section className="pfGrid" aria-label="Projects">
+        {visible.map((p, i) => (
+          <button
+            type="button"
+            className="pfCard"
+            key={p.id}
+            onClick={(e) => openProject(p.id, e.currentTarget)}
+            aria-label={`${nameOf(p)}: ${t.view}`}
+          >
+            <span className="pfCardImage">
+              <Image
+                src={p.cover}
+                alt={nameOf(p)}
+                fill
+                sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw"
+                priority={i < 2}
+              />
+            </span>
+            <span className="pfCardInfo">
+              <span className="pfCardName">{nameOf(p)}</span>
+              <span className="pfCardMeta">{p.meta}</span>
+            </span>
+          </button>
+        ))}
+      </section>
+
+      <section className="pfCta">
+        <p className="pfCtaKicker">{t.ctaKicker}</p>
+        <h2>{t.ctaTitle}</h2>
+        <a href={LINE_URL} target="_blank" rel="noreferrer" className="pfBtn">
+          {t.ctaBtn} ↗
+        </a>
+      </section>
+
+      <footer className="pfFooter">
         <span>Muck Design by BS&amp;P Beyond Home Design Co., Ltd.</span>
-        <Link href="/privacy-policy">{lang === "th" ? "นโยบายความเป็นส่วนตัว" : "Privacy Policy"}</Link>
+        <Link href="/privacy-policy">{t.privacy}</Link>
         <Link href="/">← BACK TO HOME</Link>
       </footer>
+
+      {active && (
+        <div className="pfModal" role="dialog" aria-modal="true" aria-label={nameOf(active)} onClick={() => setOpenId(null)}>
+          <div className="pfModalPanel" onClick={(e) => e.stopPropagation()}>
+            <button ref={closeRef} className="pfModalClose" onClick={() => setOpenId(null)}>
+              {t.close} ✕
+            </button>
+            <div className="pfModalHead">
+              <p className="pfKicker">{active.meta}</p>
+              <h2>{nameOf(active)}</h2>
+              <p className="pfModalSub">{active.subtitle}</p>
+            </div>
+            <div className="pfModalGrid">
+              {active.images.map((src, idx) => (
+                <figure className="pfModalItem" key={src}>
+                  <Image
+                    src={src}
+                    alt={`${nameOf(active)} — ${idx + 1}`}
+                    width={imageDimensions[src]?.[0] ?? 1200}
+                    height={imageDimensions[src]?.[1] ?? 900}
+                    sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw"
+                    loading={idx < 3 ? "eager" : "lazy"}
+                  />
+                </figure>
+              ))}
+            </div>
+            <div className="pfModalFoot">
+              <a href={LINE_URL} target="_blank" rel="noreferrer" className="pfBtn">
+                {t.ctaBtn} ↗
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
     </main>
   );
 }

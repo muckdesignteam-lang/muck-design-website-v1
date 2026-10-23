@@ -1,50 +1,43 @@
-.portfolioPage{background:#EEEBE5;color:#2A2823;min-height:100vh;font-family:var(--font-manrope),var(--font-ibm-plex-thai),sans-serif}
-.portfolioPage[lang="th"]{font-family:var(--font-ibm-plex-thai),var(--font-manrope),sans-serif}
-.portfolioHeader{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:84px;padding:5px clamp(22px,5vw,82px);border-bottom:1px solid #CCC7BE;background:#EEEBE5;position:sticky;top:0;z-index:10}
-.portfolioBrand img{object-fit:contain}.portfolioHeader nav{display:flex;gap:32px;align-items:center;font-size:12px;letter-spacing:.02em}.portfolioHeader nav a.active{color:#5E6A55;border-bottom:1px solid #5E6A55;padding-bottom:5px}
-.portfolioLang{background:transparent;border:0;color:#2A2823;cursor:pointer;font-size:12px}
-.portfolioInner{max-width:1320px;margin:0 auto;padding:0 clamp(22px,5vw,78px)}
-.portfolioIntro{padding:clamp(64px,8vw,120px) 0 58px;max-width:820px}
-.portfolioKicker,.portfolioNumber{color:#5E6A55;letter-spacing:.12em;font-size:11px;font-weight:600}
-.portfolioIntro h1{font-size:clamp(41px,5.7vw,76px);font-weight:400;line-height:1.09;letter-spacing:-.045em;margin:20px 0 24px}
-.portfolioIntro>p:last-child{font-size:clamp(14px,1.4vw,17px);line-height:1.9;color:#59564F;max-width:690px}
-.portfolioSectionHead{display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:26px}
-.portfolioSectionHead h2{font-size:clamp(28px,3.2vw,42px);font-weight:400;line-height:1.1;letter-spacing:-.03em;margin:10px 0 0}
-.portfolioSectionHeadTight{margin-bottom:44px}
-.portfolioAnchorBtn{display:inline-flex;align-items:center;justify-content:center;background:#2A2823;color:#EEEBE5;padding:16px 22px;font-size:12px;letter-spacing:.08em;white-space:nowrap}
-.portfolioFeaturedSection{padding-bottom:92px}
-.portfolioFeaturedGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-.portfolioFeaturedCard{display:flex;flex-direction:column;gap:14px}
-.portfolioFeaturedImage{position:relative;aspect-ratio:4/3;background:#D6D1C7;overflow:hidden}
-.portfolioFeaturedImage img{object-fit:cover;transition:transform .45s ease}
-@media(hover:hover){.portfolioFeaturedCard:hover .portfolioFeaturedImage img,.portfolioMosaicItem:hover img{transform:scale(1.02)}}
-.portfolioFeaturedInfo h3{font-size:clamp(20px,2vw,28px);font-weight:500;letter-spacing:-.02em;margin:8px 0 4px}
-.portfolioFeaturedInfo p:last-child{font-size:13px;color:#68645E;margin:0}
-.portfolioAllSection{padding:10px 0 10px}
-.portfolioProjectList{display:flex;flex-direction:column;gap:72px}
-.portfolioProjectBlock{border-top:1px solid #C9C3B8;padding-top:28px}
-.portfolioProjectHeader{display:flex;justify-content:space-between;align-items:flex-end;gap:18px;margin-bottom:24px}
-.portfolioProjectHeader h3{font-size:clamp(24px,2.7vw,36px);font-weight:400;letter-spacing:-.03em;margin:10px 0 4px}
-.portfolioProjectHeader p{font-size:14px;color:#68645E;margin:0}
-.portfolioProjectMeta{font-size:11px;letter-spacing:.12em;color:#5E6A55;text-transform:uppercase;white-space:nowrap}
-.portfolioMosaicGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;grid-auto-flow:dense}
-.portfolioMosaicItem{position:relative;aspect-ratio:1/1;background:#D6D1C7;overflow:hidden}
-.portfolioMosaicItem img{object-fit:cover;transition:transform .45s ease}
-.portfolioMosaicItem.is-wide{grid-column:span 2;aspect-ratio:1.62/1}
-.portfolioMosaicItem.is-tall{grid-row:span 2;aspect-ratio:auto;min-height:100%}
-.portfolioEnd{padding:78px 0 88px;text-align:center}.portfolioEnd p{font-size:24px;margin:0 0 20px}.portfolioEnd a{display:inline-block;background:#2A2823;color:#EEEBE5;padding:16px 26px;font-size:12px;letter-spacing:.08em}
-.portfolioFooter{background:#2A2823;color:#EEEBE5;display:flex;flex-wrap:wrap;gap:22px;justify-content:space-between;padding:25px clamp(22px,5vw,82px);font-size:12px;margin-top:32px}
-@media(max-width:900px){.portfolioFeaturedGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.portfolioMosaicGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.portfolioMosaicItem.is-wide{grid-column:span 2}.portfolioProjectHeader{align-items:flex-start;flex-direction:column}}
-@media(max-width:700px){.portfolioHeader{min-height:74px;gap:10px;padding:5px 18px}.portfolioBrand img{width:90px;height:auto}.portfolioHeader nav{gap:11px;font-size:11px}.portfolioHeader nav a:first-child,.portfolioHeader nav a:nth-child(2){display:none}.portfolioLang{font-size:11px}.portfolioInner{padding:0 18px}.portfolioIntro{padding:56px 0 34px}.portfolioSectionHead{align-items:flex-start;flex-direction:column}.portfolioAnchorBtn{width:100%}.portfolioFeaturedGrid{grid-template-columns:1fr;gap:24px}.portfolioFeaturedImage{aspect-ratio:1.28/1}.portfolioAllSection{padding-top:0}.portfolioProjectList{gap:54px}.portfolioMosaicGrid{grid-template-columns:1fr;gap:8px}.portfolioMosaicItem,.portfolioMosaicItem.is-wide,.portfolioMosaicItem.is-tall{grid-column:span 1;grid-row:span 1;aspect-ratio:1.25/1}.portfolioProjectMeta{white-space:normal}}
-
-/* V9.1 editorial: full-photo masonry, click-through covers and post-grid CTA */
-.portfolioFeaturedCard{color:inherit;text-decoration:none}
-.portfolioFeaturedCard:focus-visible,.portfolioAnchorBtn:focus-visible{outline:2px solid #5E6A55;outline-offset:5px}
-.portfolioExploreRow{display:flex;justify-content:center;padding-top:38px}
-.portfolioProjectBlock{scroll-margin-top:110px}
-.portfolioAllSection{scroll-margin-top:110px}
-.portfolioMosaicGrid{display:block;columns:3;column-gap:10px}
-.portfolioMosaicItem,.portfolioMosaicItem.is-wide,.portfolioMosaicItem.is-tall{display:block;width:100%;aspect-ratio:auto;min-height:0;margin:0 0 10px;break-inside:avoid;overflow:hidden;background:#D6D1C7}
-.portfolioMosaicItem img{display:block;position:static!important;width:100%;height:auto;object-fit:contain;transform:none!important}
-@media(max-width:900px){.portfolioMosaicGrid{columns:2}}
-@media(max-width:700px){.portfolioMosaicGrid{columns:1}.portfolioExploreRow{padding-top:26px}.portfolioMosaicItem{margin-bottom:8px}}
+.pfPage{background:#EEEBE5;color:#2A2823;min-height:100vh;font-family:var(--font-manrope),var(--font-ibm-plex-thai),sans-serif}
+.pfPage[lang="th"]{font-family:var(--font-ibm-plex-thai),var(--font-manrope),sans-serif}
+.pfPage a{color:inherit;text-decoration:none}
+.pfHeader{max-width:1320px;margin:0 auto;padding:30px clamp(22px,5vw,78px) 22px;text-align:center}
+.pfBrand{display:inline-block}.pfBrand img{object-fit:contain;height:auto}
+.pfHeader nav{display:flex;flex-wrap:wrap;gap:10px 38px;justify-content:center;align-items:center;margin-top:22px;font-size:12px;letter-spacing:.2em;text-transform:uppercase}
+.pfHeader nav a.active{border-bottom:1px solid #2A2823;padding-bottom:4px}
+.pfHeader nav a:hover{color:#5E6A55}
+.pfLang{background:transparent;border:0;color:#2A2823;cursor:pointer;font:inherit;letter-spacing:.2em;min-height:44px}
+.pfIntro{max-width:780px;margin:0 auto;padding:clamp(56px,8vw,104px) 22px 44px;text-align:center}
+.pfKicker{color:#5E6A55;letter-spacing:.26em;font-size:11px;font-weight:600;margin:0}
+.pfIntro h1{font-size:clamp(40px,7vw,84px);font-weight:300;letter-spacing:.14em;line-height:1;margin:26px 0 28px;padding-left:.14em}
+.pfIntroText{font-size:clamp(14px,1.4vw,17px);line-height:1.95;color:#59564F;margin:0}
+.pfFilters{display:flex;flex-wrap:wrap;gap:6px 34px;justify-content:center;padding:0 22px 52px}
+.pfChip{background:transparent;border:0;border-bottom:1px solid transparent;color:#6B665C;cursor:pointer;font:inherit;font-size:12px;letter-spacing:.2em;text-transform:uppercase;padding:12px 4px;min-height:44px}
+.pfChip:hover{color:#2A2823}.pfChip.on{color:#2A2823;border-bottom-color:#2A2823}
+.pfGrid{max-width:1320px;margin:0 auto;padding:0 clamp(22px,5vw,78px) 96px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:56px 32px}
+.pfCard{display:block;background:transparent;border:0;padding:0;margin:0;font:inherit;color:inherit;text-align:center;cursor:pointer}
+.pfCardImage{display:block;position:relative;aspect-ratio:4/5;background:#D6D1C7;overflow:hidden}
+.pfCardImage img{object-fit:cover;transition:opacity .35s ease,transform .6s ease}
+@media(hover:hover){.pfCard:hover .pfCardImage img{opacity:.88;transform:scale(1.02)}}
+.pfCard:focus-visible{outline:2px solid #5E6A55;outline-offset:6px}
+.pfCardInfo{display:block;margin-top:22px}
+.pfCardName{display:block;font-size:15px;letter-spacing:.18em;text-transform:uppercase;line-height:1.5}
+.pfCardMeta{display:block;margin-top:10px;font-size:11px;letter-spacing:.2em;color:#5E6A55;text-transform:uppercase}
+.pfBtn{display:inline-block;border:1px solid #2A2823;padding:16px 34px;font-size:12px;letter-spacing:.2em;transition:background .25s,color .25s}
+.pfBtn:hover{background:#2A2823;color:#EEEBE5}
+.pfCta{background:#B7BDAE;text-align:center;padding:clamp(72px,9vw,120px) 22px}
+.pfCtaKicker{font-size:11px;letter-spacing:.3em;color:#3F4A38;margin:0 0 22px;font-weight:600}
+.pfCta h2{font-size:clamp(26px,3.6vw,46px);font-weight:300;letter-spacing:.08em;line-height:1.3;margin:0 auto 38px;max-width:760px}
+.pfFooter{background:#2A2823;color:#EEEBE5;display:flex;flex-wrap:wrap;gap:22px;justify-content:space-between;padding:25px clamp(22px,5vw,82px);font-size:12px}
+.pfModal{position:fixed;inset:0;z-index:50;background:rgba(42,40,35,.55);overflow-y:auto;overscroll-behavior:contain}
+.pfModalPanel{position:relative;background:#EEEBE5;max-width:1240px;margin:clamp(0px,3vw,36px) auto;padding:clamp(56px,6vw,84px) clamp(20px,4vw,64px) 56px;min-height:100%}
+.pfModalClose{position:sticky;top:12px;float:right;z-index:2;background:#2A2823;color:#EEEBE5;border:0;font:inherit;font-size:12px;letter-spacing:.18em;padding:13px 20px;cursor:pointer;min-height:44px}
+.pfModalHead{text-align:center;max-width:720px;margin:0 auto 44px;clear:both}
+.pfModalHead h2{font-size:clamp(28px,4vw,48px);font-weight:300;letter-spacing:.06em;line-height:1.2;margin:18px 0 10px}
+.pfModalSub{font-size:14px;color:#68645E;margin:0}
+.pfModalGrid{columns:3;column-gap:12px}
+.pfModalItem{margin:0 0 12px;break-inside:avoid;background:#D6D1C7;overflow:hidden}
+.pfModalItem img{display:block;width:100%;height:auto}
+.pfModalFoot{text-align:center;padding-top:48px}
+@media(max-width:1100px){.pfGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.pfModalGrid{columns:2}}
+@media(max-width:700px){.pfHeader{padding-top:22px}.pfHeader nav{gap:6px 22px;font-size:11px}.pfGrid{grid-template-columns:1fr;gap:44px}.pfModalGrid{columns:1}.pfModalPanel{margin:0}}
