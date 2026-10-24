@@ -7,21 +7,28 @@ export type Lang = "th" | "en";
 
 export function PortfolioHeader({ lang, onToggleLang }: { lang: Lang; onToggleLang: () => void }) {
   return (
-    <header className="pfHeader">
-      <Link href="/" aria-label="MUCK Design home" className="pfBrand">
-        <Image src="/logo/muck-logo.png" width={116} height={68} alt="MUCK Design" priority />
+    <header className="siteHeader">
+      <Link className="brand" href="/" aria-label="MUCK Design home">
+        <Image src="/logo/muck-logo.png" alt="MUCK Design" width={120} height={70} priority />
       </Link>
-      <nav aria-label="Main navigation">
-        <Link href="/">Home</Link>
-        <Link href="/projects">Projects</Link>
-        <Link className="active" href="/portfolio" aria-current="page">
+      <nav>
+        <Link href="/#projects">Projects</Link>
+        <Link className="pfNavActive" href="/portfolio" aria-current="page">
           Portfolio
         </Link>
+        <Link href="/#services">Services</Link>
+        <Link href="/#process">How We Work</Link>
+        <Link href="/#about">About</Link>
         <Link href="/#contact">Contact</Link>
-        <button className="pfLang" onClick={onToggleLang}>
+      </nav>
+      <div className="headerActions">
+        <button className="lang" onClick={onToggleLang}>
           {lang === "th" ? "EN | TH" : "TH | EN"}
         </button>
-      </nav>
+        <Link className="contactBtn" href="/#contact">
+          CONTACT US →
+        </Link>
+      </div>
     </header>
   );
 }

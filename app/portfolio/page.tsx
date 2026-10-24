@@ -123,15 +123,19 @@ export default function PortfolioPage() {
 
       <section className="pfExplore">
         <p>{t.exploreLine}</p>
-        <Link href="/portfolio/all" className="pfBtn">
+        <Link href="/portfolio/all" className="solidBtn">
           {t.exploreBtn} →
         </Link>
       </section>
 
       <ProjectCTA lang={lang} />
 
-      <footer className="pfFooter">
-        <span>Muck Design by BS&amp;P Beyond Home Design Co., Ltd.</span>
+      <footer>
+        <div>
+          <span>Muck Design by BS&amp;P Beyond Home Design Co.,Ltd.</span>
+          <span>:</span>
+          <span>The Path to Better Living</span>
+        </div>
         <Link href="/privacy-policy">{lang === "th" ? "นโยบายความเป็นส่วนตัว" : "Privacy Policy"}</Link>
         <Link href="/">← BACK TO HOME</Link>
       </footer>
@@ -162,7 +166,7 @@ export default function PortfolioPage() {
               ))}
             </div>
             <div className="pfModalFoot">
-              <a href={LINE_URL} target="_blank" rel="noreferrer" className="pfBtn">
+              <a href={LINE_URL} target="_blank" rel="noreferrer" className="solidBtn">
                 {t.ctaBtn} ↗
               </a>
             </div>

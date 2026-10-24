@@ -156,6 +156,7 @@ export const projects: Project[] = [
       "/images/portfolio/optic-shop/display-wall.png",
       "/images/portfolio/optic-shop/showroom-angle.png",
       "/images/portfolio/optic-shop/corridor.png",
+      "/images/portfolio/optic-shop/circle-shelf.jpg",
     ],
     featured: true,
   },
@@ -218,6 +219,10 @@ export const imageDimensions: Record<string, [number, number]> = {
   "/images/portfolio/golden-neo-bangna-suan-luang/workstation.jpg": [
     2000,
     1500
+  ],
+  "/images/portfolio/optic-shop/circle-shelf.jpg": [
+    1086,
+    1448
   ],
   "/images/portfolio/optic-shop/corridor.png": [
     1024,
@@ -376,3 +381,7 @@ export const imageDimensions: Record<string, [number, number]> = {
     1536
   ]
 };
+
+// Optional: adjust how a photo is cropped inside the equal-size tiles on /portfolio/all.
+// Example: "/images/portfolio/soi-aree-8/hero.jpg": "50% 30%"  (x% y%, default is center)
+export const imageFocus: Record<string, string> = {};

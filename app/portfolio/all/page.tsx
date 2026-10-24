@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ProjectCTA } from "../../projects/project-system";
 import { PortfolioHeader, type Lang } from "../portfolio-header";
-import { imageDimensions, projects, type Group, type Project } from "../projects-data";
+import { imageFocus, projects, type Group, type Project } from "../projects-data";
 import "../portfolio.css";
 
 type Filter = "all" | Group;
@@ -112,29 +112,35 @@ export default function PortfolioAllPage() {
             }}
             aria-label={`${nameOf(p.project)} — ${i + 1}`}
           >
-            <Image
-              src={p.src}
-              alt={`${nameOf(p.project)} — ${i + 1}`}
-              width={imageDimensions[p.src]?.[0] ?? 1200}
-              height={imageDimensions[p.src]?.[1] ?? 900}
-              sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw"
-              priority={i < 3}
-            />
+            <span className="pfAllImg">
+              <Image
+                src={p.src}
+                alt={`${nameOf(p.project)} — ${i + 1}`}
+                fill
+                sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw"
+                style={{ objectFit: "cover", objectPosition: imageFocus[p.src] ?? "50% 50%" }}
+                priority={i < 3}
+              />
+            </span>
             <span className="pfAllCaption">{nameOf(p.project)}</span>
           </button>
         ))}
       </section>
 
       <div className="pfExplore">
-        <Link href="/portfolio" className="pfBtn">
+        <Link href="/portfolio" className="pfBtnGhost">
           {t.back}
         </Link>
       </div>
 
       <ProjectCTA lang={lang} />
 
-      <footer className="pfFooter">
-        <span>Muck Design by BS&amp;P Beyond Home Design Co., Ltd.</span>
+      <footer>
+        <div>
+          <span>Muck Design by BS&amp;P Beyond Home Design Co.,Ltd.</span>
+          <span>:</span>
+          <span>The Path to Better Living</span>
+        </div>
         <Link href="/privacy-policy">{lang === "th" ? "นโยบายความเป็นส่วนตัว" : "Privacy Policy"}</Link>
         <Link href="/">← BACK TO HOME</Link>
       </footer>
