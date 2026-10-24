@@ -13,12 +13,7 @@ const finished = [
   ["/images/projects/dental-clinic-chachoengsao/finished-05.jpg","Meeting / consultation area"],
   ["/images/projects/dental-clinic-chachoengsao/finished-06.jpg","Vanity / wash area"],
   ["/images/projects/dental-clinic-chachoengsao/finished-07.jpg","Clinic frontage"],
-];
-
-const details = [
   ["/images/projects/dental-clinic-chachoengsao/detail-01.jpg","Built-in shelving and integrated lighting"],
-  ["/images/projects/dental-clinic-chachoengsao/detail-02.jpg","Material palette"],
-  ["/images/projects/dental-clinic-chachoengsao/detail-03.jpg","Lighting and wall treatment detail"],
 ];
 
 const process = [
@@ -81,15 +76,6 @@ export default function DentalClinicProject(){
       <div className="editorialGallery">
         {finished.map(([src,alt])=><figure key={src}>
           <div className="galleryFrame"><Image src={src} alt={alt} fill quality={95} sizes="(max-width:900px) 100vw, 33vw"/></div>
-        </figure>)}
-      </div>
-    </section>
-
-    <section className="projectGallerySection soft">
-      <div className="sectionTitleRow"><h2>Details</h2><i></i></div>
-      <div className="detailGrid">
-        {details.map(([src,alt])=><figure key={src}>
-          <div className="detailFrame"><Image src={src} alt={alt} fill quality={95} sizes="(max-width:900px) 100vw, 33vw"/></div>
         </figure>)}
       </div>
     </section>

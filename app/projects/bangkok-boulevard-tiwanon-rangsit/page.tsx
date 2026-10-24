@@ -13,9 +13,6 @@ const finished = [
   ["/images/projects/bangkok-boulevard-tiwanon-rangsit/finished-05.jpg","Cabinetry and lighting detail"],
   ["/images/projects/bangkok-boulevard-tiwanon-rangsit/finished-06.jpg","TV wall composition"],
   ["/images/projects/bangkok-boulevard-tiwanon-rangsit/finished-07.jpg","TV wall storage detail"],
-];
-
-const details = [
   ["/images/projects/bangkok-boulevard-tiwanon-rangsit/detail-01.jpg","Floating TV cabinet detail"],
   ["/images/projects/bangkok-boulevard-tiwanon-rangsit/detail-02.jpg","Illuminated display niche"],
   ["/images/projects/bangkok-boulevard-tiwanon-rangsit/detail-03.jpg","Vertical slat material detail"],
@@ -82,15 +79,6 @@ export default function BangkokBoulevardProject(){
       <div className="editorialGallery">
         {finished.map(([src,alt])=><figure key={src}>
           <div className="galleryFrame"><Image src={src} alt={alt} fill quality={95} sizes="(max-width:900px) 100vw, 33vw"/></div>
-        </figure>)}
-      </div>
-    </section>
-
-    <section className="projectGallerySection soft">
-      <div className="sectionTitleRow"><h2>Details</h2><i></i></div>
-      <div className="detailGrid">
-        {details.map(([src,alt])=><figure key={src}>
-          <div className="detailFrame"><Image src={src} alt={alt} fill quality={95} sizes="(max-width:900px) 100vw, 33vw"/></div>
         </figure>)}
       </div>
     </section>

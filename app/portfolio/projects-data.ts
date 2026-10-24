@@ -55,8 +55,8 @@ export const projects: Project[] = [
     group: "residential",
     th: "บางกอก บูเลอวาร์ด ติวานนท์-รังสิต",
     en: "Bangkok Boulevard Tiwanon–Rangsit",
-    subtitle: "Renovation & Built-in",
-    meta: "Residential · Renovation & Built-in",
+    subtitle: "Design & Built-in",
+    meta: "Residential · Design & Built-in",
     cover: "/images/projects/bangkok-boulevard-tiwanon-rangsit/hero.jpg",
     images: [
       "/images/projects/bangkok-boulevard-tiwanon-rangsit/hero.jpg",

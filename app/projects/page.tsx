@@ -12,22 +12,22 @@ const projectData = [
     title: "New Home",
     subtitle: "Interior & Built-in",
     image: "/images/project-new-home.jpg",
-    th: "งานตกแต่งภายในและ Built-in สำหรับบ้านใหม่ โดยวางแผนพื้นที่และรายละเอียดงานให้เหมาะกับการใช้งานจริงของเจ้าของบ้าน",
-    en: "Interior and built-in work for new homes, coordinated around practical use, detailing, materials and installation."
+    th: "งานออกแบบตกแต่งภายในและ Built-in สำหรับบ้านใหม่ ออกแบบและตกแต่งพื้นที่อย่างพิถีพิถัน ตอบโจทย์การใช้งานจริงของเจ้าของบ้าน พร้อมการวางแผนสเปซ คัดเลือกวัสดุ และควบคุมงานติดตั้งอย่างใกล้ชิด",
+    en: "Tailored interior and custom built-in solutions designed around your lifestyle, with meticulous attention to spatial planning, material selection, and precision installation."
   },
   {
     id: "home-renovation",
     category: "RESIDENTIAL · RENOVATION",
     title: "Home Renovation",
-    subtitle: "Renovation & Built-In",
+    subtitle: "Built-in & Renovation",
     image: "/images/projects/passorn-8-bang-yai/hero-finished.jpg",
-    th: "รีโนเวทบ้านพักอาศัยเดิม โดยประสานงานงานก่อสร้าง วัสดุ งานติดตั้ง และงานเก็บรายละเอียดจนพร้อมใช้งาน",
-    en: "Residential renovation with coordinated construction, material detailing, installation and finishing through completion."
+    th: "งานรีโนเวทและตกแต่งบ้านพักอาศัย ปรับเปลี่ยนพื้นที่เดิมให้ตอบโจทย์ชีวิตยุคใหม่ ดูแลแบบ Turnkey ครอบคลุมตั้งแต่การตรวจเช็กโครงสร้าง วางผังพื้นที่ คัดสรรวัสดุ และควบคุมการติดตั้งอย่างใกล้ชิด เพื่อส่งมอบผลงานที่สมบูรณ์แบบที่สุดสำหรับคุณ",
+    en: "Complete home transformation with end-to-end coordination—seamlessly integrating structural work, material detailing, installation, and fine finishing through to completion."
   },
   {
     id: "commercial",
     category: "COMMERCIAL",
-    title: "Commercial",
+    title: "Commercial Spaces",
     subtitle: PROJECT_CATEGORY_COPY.commercial.subtitle,
     image: "/images/projects/dental-clinic-chachoengsao/hero.jpg",
     th: PROJECT_CATEGORY_COPY.commercial.descriptionTh,

@@ -12,18 +12,15 @@ const finished = [
   ["/images/projects/moden-rangsit-klong-4/finished-pantry.jpg","Pantry / built-in"],
   ["/images/projects/moden-rangsit-klong-4/finished-bedroom.jpg","Bedroom"],
   ["/images/projects/moden-rangsit-klong-4/finished-office.jpg","Home office"],
-];
-
-const details = [
   ["/images/projects/moden-rangsit-klong-4/detail-cabinet.png","Cabinetry detail"],
   ["/images/projects/moden-rangsit-klong-4/detail-faucet.png","Material / hardware detail"],
-  ["/images/projects/moden-rangsit-klong-4/detail-wall-build-up.jpg","Construction detail"],
 ];
 
 const process = [
   ["/images/projects/moden-rangsit-klong-4/process-01.jpg","Process 01"],
   ["/images/projects/moden-rangsit-klong-4/process-02.jpg","Process 02"],
   ["/images/projects/moden-rangsit-klong-4/process-03.jpg","Process 03"],
+  ["/images/projects/moden-rangsit-klong-4/detail-wall-build-up.jpg","Wall build-up detail"],
   ["/images/projects/moden-rangsit-klong-4/process-04.jpg","Process 04"],
   ["/images/projects/moden-rangsit-klong-4/process-05.png","Process 05"],
   ["/images/projects/moden-rangsit-klong-4/process-06.jpg","Process 06"],
@@ -81,15 +78,6 @@ export default function ModenRangsitProject(){
       <div className="editorialGallery">
         {finished.map(([src,alt],i)=><figure className={i===0||i===3?"galleryWide":""} key={src}>
           <div className="galleryFrame"><Image src={src} alt={alt} fill quality={95} sizes="(max-width:900px) 100vw, 50vw"/></div>
-        </figure>)}
-      </div>
-    </section>
-
-    <section className="projectGallerySection soft">
-      <div className="sectionTitleRow"><h2>Details</h2><i></i></div>
-      <div className="detailGrid">
-        {details.map(([src,alt])=><figure key={src}>
-          <div className="detailFrame"><Image src={src} alt={alt} fill quality={95} sizes="(max-width:900px) 100vw, 50vw"/></div>
         </figure>)}
       </div>
     </section>

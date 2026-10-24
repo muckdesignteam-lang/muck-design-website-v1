@@ -11,12 +11,6 @@ const finished = [
   ["/images/projects/passorn-8-bang-yai/finished-kitchen.jpg","Kitchen"],
   ["/images/projects/passorn-8-bang-yai/finished-bathroom.jpg","Bathroom"],
   ["/images/projects/passorn-8-bang-yai/finished-walkin.jpg","Walk-in / dressing area"],
-];
-
-const details = [
-  ["/images/projects/passorn-8-bang-yai/detail-01.jpg","Construction detail"],
-  ["/images/projects/passorn-8-bang-yai/detail-02.jpg","Material detail"],
-  ["/images/projects/passorn-8-bang-yai/detail-03.jpg","Construction workmanship"],
   ["/images/projects/passorn-8-bang-yai/detail-04.jpg","Finishing detail"],
 ];
 
@@ -25,6 +19,8 @@ const process = [
   ["/images/projects/passorn-8-bang-yai/process-02-design.jpg","Design proposal"],
   ["/images/projects/passorn-8-bang-yai/process-03-demolition.jpg","Demolition"],
   ["/images/projects/passorn-8-bang-yai/process-04-construction.jpg","Construction"],
+  ["/images/projects/passorn-8-bang-yai/detail-01.jpg","Construction detail"],
+  ["/images/projects/passorn-8-bang-yai/detail-03.jpg","Construction workmanship"],
   ["/images/projects/passorn-8-bang-yai/process-05-finishing.jpg","Finishing"],
   ["/images/projects/passorn-8-bang-yai/process-06-near-complete.jpg","Near completion"],
 ];
@@ -57,10 +53,6 @@ export default function Passorn8BangYaiProject(){
 
     <section className="projectGallerySection"><div className="sectionTitleRow"><h2>Finished Spaces</h2><i></i></div><div className="editorialGallery">
       {finished.map(([src,alt])=><figure key={src}><div className="galleryFrame"><Image src={src} alt={alt} fill quality={95} sizes="(max-width:900px) 100vw, 33vw"/></div></figure>)}
-    </div></section>
-
-    <section className="projectGallerySection soft"><div className="sectionTitleRow"><h2>Construction Details</h2><i></i></div><div className="detailGrid detailGridFour">
-      {details.map(([src,alt])=><figure key={src}><div className="detailFrame"><Image src={src} alt={alt} fill quality={95} sizes="(max-width:900px) 100vw, 25vw"/></div></figure>)}
     </div></section>
 
     <section className="projectGallerySection"><div className="sectionTitleRow"><h2>Before &amp; Process</h2><i></i></div>
