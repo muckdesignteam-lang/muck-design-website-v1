@@ -46,7 +46,6 @@ export default function BangkokBoulevardProject(){
         <Link href="/projects">Projects</Link>
         <Link href="/#services">Services</Link>
         <Link href="/#process">How We Work</Link>
-        <Link href="/#about">About</Link>
         <Link href="/#contact">Contact</Link>
       </nav>
       <div className="headerActions">

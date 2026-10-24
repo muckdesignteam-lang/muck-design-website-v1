@@ -38,7 +38,7 @@ export default function Passorn8BangYaiProject(){
   return <main className="projectDetailPage" lang={lang}>
     <header className="siteHeader">
       <Link className="brand" href="/" aria-label="MUCK Design home"><Image src="/logo/muck-logo.png" alt="MUCK Design" width={120} height={70} priority /></Link>
-      <nav><Link href="/projects">Projects</Link><Link href="/#services">Services</Link><Link href="/#process">How We Work</Link><Link href="/#about">About</Link><Link href="/#contact">Contact</Link></nav>
+      <nav><Link href="/projects">Projects</Link><Link href="/#services">Services</Link><Link href="/#process">How We Work</Link><Link href="/#contact">Contact</Link></nav>
       <div className="headerActions"><button className="lang" onClick={()=>setLang(lang==="th"?"en":"th")}>{lang==="th"?"EN | TH":"TH | EN"}</button><Link className="contactBtn" href="/#contact">CONTACT US →</Link></div>
     </header>
 
