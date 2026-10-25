@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { ProjectCTA } from "../project-system";
+import { PdGrid } from "../pd-grid";
 
 const finished = [
   ["/images/projects/dental-clinic-chachoengsao/finished-01.jpg","Reception"],
@@ -14,6 +15,7 @@ const finished = [
   ["/images/projects/dental-clinic-chachoengsao/finished-06.jpg","Vanity / wash area"],
   ["/images/projects/dental-clinic-chachoengsao/finished-07.jpg","Clinic frontage"],
   ["/images/projects/dental-clinic-chachoengsao/detail-01.jpg","Built-in shelving and integrated lighting"],
+  ["/images/projects/dental-clinic-chachoengsao/finished-new-01.jpg","Built-in shelving"],
 ];
 
 const process = [
@@ -22,6 +24,10 @@ const process = [
   ["/images/projects/dental-clinic-chachoengsao/process-03.jpg","Active construction"],
   ["/images/projects/dental-clinic-chachoengsao/process-04.jpg","Reception built-in in progress"],
   ["/images/projects/dental-clinic-chachoengsao/process-05.jpg","Near-completion service area"],
+  ["/images/projects/dental-clinic-chachoengsao/process-06.jpg","Process"],
+  ["/images/projects/dental-clinic-chachoengsao/process-07.jpg","Process"],
+  ["/images/projects/dental-clinic-chachoengsao/process-08.jpg","Process"],
+  ["/images/projects/dental-clinic-chachoengsao/process-09.jpg","Process"],
 ];
 
 export default function DentalClinicProject(){
@@ -73,11 +79,7 @@ export default function DentalClinicProject(){
 
     <section className="projectGallerySection">
       <div className="sectionTitleRow"><h2>Finished Spaces</h2><i></i></div>
-      <div className="editorialGallery">
-        {finished.map(([src,alt])=><figure key={src}>
-          <div className="galleryFrame"><Image src={src} alt={alt} fill quality={95} sizes="(max-width:900px) 100vw, 33vw"/></div>
-        </figure>)}
-      </div>
+      <PdGrid items={finished} />
     </section>
 
     <section className="projectGallerySection">
@@ -87,11 +89,7 @@ export default function DentalClinicProject(){
           ?"ภาพหน้างานจริงตั้งแต่การแบ่งพื้นที่ งานผนังและฝ้า งานระบบ ไปจนถึงการติดตั้ง Built-in และงานเก็บรายละเอียดก่อนส่งมอบ"
           :"Selected site images showing the progression from partition and ceiling works through coordinated building services, built-in installation and final finishing."}
       </p>
-      <div className="processGrid">
-        {process.map(([src,alt])=><figure key={src}>
-          <div className="processFrame"><Image src={src} alt={alt} fill quality={92} sizes="(max-width:900px) 100vw, 33vw"/></div>
-        </figure>)}
-      </div>
+      <PdGrid items={process} />
     </section>
 
       <ProjectCTA lang={lang} />

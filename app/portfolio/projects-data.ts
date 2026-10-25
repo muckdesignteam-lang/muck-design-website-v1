@@ -28,6 +28,7 @@ export const projects: Project[] = [
       "/images/projects/moden-rangsit-klong-4/finished-kitchen.jpg",
       "/images/projects/moden-rangsit-klong-4/finished-pantry.jpg",
       "/images/projects/moden-rangsit-klong-4/finished-shrine.jpg",
+      "/images/projects/moden-rangsit-klong-4/finished-new-01.jpg",
     ],
     featured: true,
   },
@@ -47,6 +48,9 @@ export const projects: Project[] = [
       "/images/portfolio/ai-ratchaphruek/glass-cabinet.jpg",
       "/images/portfolio/ai-ratchaphruek/wardrobe.jpg",
       "/images/portfolio/ai-ratchaphruek/display-cabinet.jpg",
+      "/images/portfolio/ai-ratchaphruek/finished-new-01.jpg",
+      "/images/portfolio/ai-ratchaphruek/finished-new-02.jpg",
+      "/images/portfolio/ai-ratchaphruek/finished-new-03.jpg",
     ],
     featured: true,
   },
@@ -102,6 +106,9 @@ export const projects: Project[] = [
       "/images/portfolio/soi-aree-8/built-in-shelves.jpg",
       "/images/portfolio/soi-aree-8/wardrobe.jpg",
       "/images/portfolio/soi-aree-8/study-and-cabinetry.jpg",
+      "/images/projects/soi-aree-8/finished-new-01.jpg",
+      "/images/projects/soi-aree-8/finished-new-02.jpg",
+      "/images/projects/soi-aree-8/finished-new-03.jpg",
     ],
     featured: true,
   },
@@ -121,6 +128,8 @@ export const projects: Project[] = [
       "/images/portfolio/golden-neo-bangna-suan-luang/workstation-detail.jpg",
       "/images/portfolio/golden-neo-bangna-suan-luang/marble-counter.jpg",
       "/images/portfolio/golden-neo-bangna-suan-luang/bar-and-display.jpg",
+      "/images/projects/golden-neo-bangna-suan-luang/finished-new-01.jpg",
+      "/images/projects/golden-neo-bangna-suan-luang/finished-new-02.jpg",
     ],
     featured: true,
   },
@@ -379,6 +388,42 @@ export const imageDimensions: Record<string, [number, number]> = {
   "/images/projects/passorn-8-bang-yai/hero-finished.jpg": [
     2048,
     1536
+  ],
+  "/images/projects/soi-aree-8/finished-new-01.jpg": [
+    1448,
+    1086
+  ],
+  "/images/projects/soi-aree-8/finished-new-02.jpg": [
+    1448,
+    1086
+  ],
+  "/images/projects/soi-aree-8/finished-new-03.jpg": [
+    1448,
+    1086
+  ],
+  "/images/projects/golden-neo-bangna-suan-luang/finished-new-01.jpg": [
+    1448,
+    1086
+  ],
+  "/images/projects/golden-neo-bangna-suan-luang/finished-new-02.jpg": [
+    1672,
+    941
+  ],
+  "/images/portfolio/ai-ratchaphruek/finished-new-01.jpg": [
+    1500,
+    2000
+  ],
+  "/images/portfolio/ai-ratchaphruek/finished-new-02.jpg": [
+    1196,
+    896
+  ],
+  "/images/portfolio/ai-ratchaphruek/finished-new-03.jpg": [
+    1500,
+    2000
+  ],
+  "/images/projects/moden-rangsit-klong-4/finished-new-01.jpg": [
+    768,
+    1024
   ]
 };
 

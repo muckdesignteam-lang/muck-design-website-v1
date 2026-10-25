@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { ProjectCTA } from "../project-system";
+import { PdGrid } from "../pd-grid";
 
 const finished = [
   ["/images/projects/moden-rangsit-klong-4/finished-kitchen.jpg","Kitchen"],
@@ -14,6 +15,7 @@ const finished = [
   ["/images/projects/moden-rangsit-klong-4/finished-office.jpg","Home office"],
   ["/images/projects/moden-rangsit-klong-4/detail-cabinet.png","Cabinetry detail"],
   ["/images/projects/moden-rangsit-klong-4/detail-faucet.png","Material / hardware detail"],
+  ["/images/projects/moden-rangsit-klong-4/finished-new-01.jpg","Finished cabinetry"],
 ];
 
 const process = [
@@ -24,6 +26,8 @@ const process = [
   ["/images/projects/moden-rangsit-klong-4/process-04.jpg","Process 04"],
   ["/images/projects/moden-rangsit-klong-4/process-05.png","Process 05"],
   ["/images/projects/moden-rangsit-klong-4/process-06.jpg","Process 06"],
+  ["/images/projects/moden-rangsit-klong-4/process-07.jpg","Process"],
+  ["/images/projects/moden-rangsit-klong-4/process-08.jpg","Process"],
 ];
 
 export default function ModenRangsitProject(){
@@ -75,11 +79,7 @@ export default function ModenRangsitProject(){
 
     <section className="projectGallerySection">
       <div className="sectionTitleRow"><h2>Finished Spaces</h2><i></i></div>
-      <div className="editorialGallery">
-        {finished.map(([src,alt],i)=><figure className={i===0||i===3?"galleryWide":""} key={src}>
-          <div className="galleryFrame"><Image src={src} alt={alt} fill quality={95} sizes="(max-width:900px) 100vw, 50vw"/></div>
-        </figure>)}
-      </div>
+      <PdGrid items={finished} />
     </section>
 
     <section className="projectGallerySection">
@@ -89,11 +89,7 @@ export default function ModenRangsitProject(){
           ?"ภาพหน้างานจริงในแต่ละช่วง เพื่อให้เห็นกระบวนการตั้งแต่สภาพพื้นที่เดิม งานก่อสร้าง ไปจนถึงงานติดตั้งก่อนส่งมอบ"
           :"Selected site images showing the actual progression from existing conditions through construction and installation."}
       </p>
-      <div className="processGrid">
-        {process.map(([src,alt])=><figure key={src}>
-          <div className="processFrame"><Image src={src} alt={alt} fill quality={92} sizes="(max-width:900px) 100vw, 33vw"/></div>
-        </figure>)}
-      </div>
+      <PdGrid items={process} />
     </section>
 
       <ProjectCTA lang={lang} />

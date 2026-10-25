@@ -522,3 +522,12 @@
 .heroDots button.on::after{background:#fff;transform:scale(1.35)}
 .handoverNote{margin-top:10px;font-size:12px;line-height:1.5;font-style:italic;color:var(--muted)}
 @media (prefers-reduced-motion:reduce){.heroSlide,.heroSlide img,.heroSlide.on img{transition:none!important;transform:none!important}}
+
+/* Project photo grids (equal tiles) */
+.pdGrid{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:24px}
+.pdItem{margin:0;flex:0 0 calc((100% - 24px)/3);min-width:0}
+.pdc2 .pdItem{flex-basis:calc((100% - 12px)/2)}
+.pdFrame{position:relative;aspect-ratio:4/5;background:#e7e2d8;overflow:hidden}
+.pdFrame img{object-fit:cover}
+.pdFrame.fit{background:#f2eee5}.pdFrame.fit img{object-fit:contain}
+@media(max-width:700px){.pdGrid{gap:8px}.pdItem,.pdc2 .pdItem{flex-basis:calc((100% - 8px)/2)}.pdc3 .pdItem:first-child{flex-basis:100%}.pdc3 .pdItem:first-child .pdFrame{aspect-ratio:4/3}}

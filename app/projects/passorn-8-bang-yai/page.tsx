@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { ProjectCTA } from "../project-system";
+import { PdGrid } from "../pd-grid";
 
 const finished = [
   ["/images/projects/passorn-8-bang-yai/finished-exterior-front.jpg","Front elevation"],
@@ -12,6 +13,9 @@ const finished = [
   ["/images/projects/passorn-8-bang-yai/finished-bathroom.jpg","Bathroom"],
   ["/images/projects/passorn-8-bang-yai/finished-walkin.jpg","Walk-in / dressing area"],
   ["/images/projects/passorn-8-bang-yai/detail-04.jpg","Finishing detail"],
+  ["/images/projects/passorn-8-bang-yai/finished-new-01.jpg","Finished space"],
+  ["/images/projects/passorn-8-bang-yai/finished-new-02.jpg","Finished space"],
+  ["/images/projects/passorn-8-bang-yai/finished-new-03.jpg","Finished space"],
 ];
 
 const process = [
@@ -23,6 +27,7 @@ const process = [
   ["/images/projects/passorn-8-bang-yai/detail-03.jpg","Construction workmanship"],
   ["/images/projects/passorn-8-bang-yai/process-05-finishing.jpg","Finishing"],
   ["/images/projects/passorn-8-bang-yai/process-06-near-complete.jpg","Near completion"],
+  ["/images/projects/passorn-8-bang-yai/process-new-01.jpg","Process"],
 ];
 
 export default function Passorn8BangYaiProject(){
@@ -51,13 +56,11 @@ export default function Passorn8BangYaiProject(){
 
     <section className="projectOverviewText"><p className="eyebrow">PROJECT OVERVIEW</p><p>{overview}</p></section>
 
-    <section className="projectGallerySection"><div className="sectionTitleRow"><h2>Finished Spaces</h2><i></i></div><div className="editorialGallery">
-      {finished.map(([src,alt])=><figure key={src}><div className="galleryFrame"><Image src={src} alt={alt} fill quality={95} sizes="(max-width:900px) 100vw, 33vw"/></div></figure>)}
-    </div></section>
+    <section className="projectGallerySection"><div className="sectionTitleRow"><h2>Finished Spaces</h2><i></i></div><PdGrid items={finished} /></section>
 
     <section className="projectGallerySection"><div className="sectionTitleRow"><h2>Before &amp; Process</h2><i></i></div>
       <p className="projectSectionLead">{lang==="th"?"ลำดับภาพตั้งแต่สภาพบ้านเดิม แนวทางการออกแบบ งานรื้อถอน งานก่อสร้าง ไปจนถึงช่วงเก็บรายละเอียดก่อนส่งมอบ":"A selected sequence from the original condition and design direction through demolition, construction and final finishing."}</p>
-      <div className="processGrid">{process.map(([src,alt])=><figure key={src}><div className="processFrame"><Image src={src} alt={alt} fill quality={92} sizes="(max-width:900px) 100vw, 33vw"/></div></figure>)}</div>
+      <PdGrid items={process} />
     </section>
 
       <ProjectCTA lang={lang} />

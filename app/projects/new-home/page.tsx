@@ -28,13 +28,13 @@ const projects = [
   },
   {
     number: "03",
-    title: "Soi Ari 8",
+    title: "Soi Aree 8",
     titleTh: "ซอยอารีย์ 8",
     location: "Bangkok",
     locationTh: "กรุงเทพฯ",
-    image: null,
-    href: "",
-    ready: false,
+    image: "/images/portfolio/soi-aree-8/hero.jpg",
+    href: "/projects/soi-aree-8",
+    ready: true,
   },
   {
     number: "04",
@@ -42,9 +42,9 @@ const projects = [
     titleTh: "โกลเด้น นีโอ บางนา-สวนหลวง",
     location: "Samut Prakan",
     locationTh: "สมุทรปราการ",
-    image: null,
-    href: "",
-    ready: false,
+    image: "/images/portfolio/golden-neo-bangna-suan-luang/hero.jpg",
+    href: "/projects/golden-neo-bangna-suan-luang",
+    ready: true,
   },
 ];
 

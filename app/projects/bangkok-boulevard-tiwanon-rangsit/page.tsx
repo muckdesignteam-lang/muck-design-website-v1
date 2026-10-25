@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { ProjectCTA } from "../project-system";
+import { PdGrid } from "../pd-grid";
 
 const finished = [
   ["/images/projects/bangkok-boulevard-tiwanon-rangsit/finished-01.jpg","Kitchen island and staircase"],
@@ -15,7 +16,6 @@ const finished = [
   ["/images/projects/bangkok-boulevard-tiwanon-rangsit/finished-07.jpg","TV wall storage detail"],
   ["/images/projects/bangkok-boulevard-tiwanon-rangsit/detail-01.jpg","Floating TV cabinet detail"],
   ["/images/projects/bangkok-boulevard-tiwanon-rangsit/detail-02.jpg","Illuminated display niche"],
-  ["/images/projects/bangkok-boulevard-tiwanon-rangsit/detail-03.jpg","Vertical slat material detail"],
 ];
 
 const process = [
@@ -25,6 +25,9 @@ const process = [
   ["/images/projects/bangkok-boulevard-tiwanon-rangsit/process-04.jpg","Ceiling and M&E work"],
   ["/images/projects/bangkok-boulevard-tiwanon-rangsit/process-05.jpg","Living area preparation"],
   ["/images/projects/bangkok-boulevard-tiwanon-rangsit/process-06.jpg","Near-completion built-in work"],
+  ["/images/projects/bangkok-boulevard-tiwanon-rangsit/process-07.jpg","Process"],
+  ["/images/projects/bangkok-boulevard-tiwanon-rangsit/process-08.jpg","Process"],
+  ["/images/projects/bangkok-boulevard-tiwanon-rangsit/process-09.jpg","Process"],
 ];
 
 export default function BangkokBoulevardProject(){
@@ -76,11 +79,7 @@ export default function BangkokBoulevardProject(){
 
     <section className="projectGallerySection">
       <div className="sectionTitleRow"><h2>Finished Spaces</h2><i></i></div>
-      <div className="editorialGallery">
-        {finished.map(([src,alt])=><figure key={src}>
-          <div className="galleryFrame"><Image src={src} alt={alt} fill quality={95} sizes="(max-width:900px) 100vw, 33vw"/></div>
-        </figure>)}
-      </div>
+      <PdGrid items={finished} />
     </section>
 
     <section className="projectGallerySection">
@@ -90,11 +89,7 @@ export default function BangkokBoulevardProject(){
           ?"ภาพหน้างานจริงตั้งแต่การเตรียมพื้นที่ งานฝ้าและระบบ งานผลิตและติดตั้ง Built-in ไปจนถึงขั้นตอนเก็บรายละเอียดก่อนส่งมอบ"
           :"Selected site images showing the progression from space preparation and M&E work through built-in production, installation and final detailing."}
       </p>
-      <div className="processGrid">
-        {process.map(([src,alt])=><figure key={src}>
-          <div className="processFrame"><Image src={src} alt={alt} fill quality={92} sizes="(max-width:900px) 100vw, 33vw"/></div>
-        </figure>)}
-      </div>
+      <PdGrid items={process} />
     </section>
 
       <ProjectCTA lang={lang} />
