@@ -20,11 +20,11 @@
 .pfExplore p{font-size:12px;letter-spacing:.1em;color:var(--muted);margin:0 0 6px}
 .pfBtnGhost{display:inline-block;border:1px solid var(--ink);padding:14px 22px;font-size:12px;margin-top:16px;transition:background .25s,color .25s}
 .pfBtnGhost:hover{background:var(--ink);color:#fff}
-.pfAllGrid{max-width:1560px;margin:0 auto;padding:0 clamp(14px,2vw,28px) 72px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px 12px}
-.pfAllItem{display:block;width:100%;padding:0;border:0;background:transparent;text-align:left;cursor:pointer;font:inherit;color:inherit}
+.pfAllGrid{max-width:1440px;margin:0 auto;padding:0 clamp(14px,2vw,28px) 72px;display:flex;flex-wrap:wrap;justify-content:center;gap:26px 10px}
+.pfAllItem{display:block;flex:0 0 calc((100% - 30px)/4);min-width:0;padding:0;border:0;background:transparent;text-align:left;cursor:pointer;font:inherit;color:inherit}
 .pfAllImg{display:block;position:relative;aspect-ratio:4/5;background:#e7e2d8;overflow:hidden}
 @media(hover:hover){.pfAllItem:hover .pfAllImg img{opacity:.9}}
-.pfAllCaption{display:block;margin-top:9px;font-size:11px;letter-spacing:.06em;color:#4f4b44}
+.pfAllCaption{display:block;margin-top:7px;font-size:10px;letter-spacing:.06em;color:#4f4b44}
 .pfModal{position:fixed;inset:0;z-index:50;background:rgba(30,30,28,.55);overflow-y:auto;overscroll-behavior:contain}
 .pfModalPanel{position:relative;background:var(--paper);max-width:1240px;margin:clamp(0px,3vw,36px) auto;padding:clamp(56px,6vw,84px) clamp(20px,4vw,64px) 56px;min-height:100%}
 .pfModalClose{position:sticky;top:12px;float:right;z-index:2;background:var(--ink);color:#fff;border:0;font:inherit;font-size:12px;letter-spacing:.12em;padding:13px 20px;cursor:pointer;min-height:44px}
@@ -42,5 +42,5 @@
 .pfLbNav.prev{left:6px}.pfLbNav.next{right:6px}
 .pfLbCaption{position:absolute;bottom:16px;left:0;right:0;text-align:center;color:#d8d2c8;font-size:12px;letter-spacing:.1em;margin:0}
 footer>a{font-size:11px;letter-spacing:.06em}
-@media(max-width:1100px){.pfGrid,.pfAllGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.pfModalGrid{columns:2}}
-@media(max-width:700px){.pfGrid{grid-template-columns:1fr;gap:40px}.pfAllGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 8px}.pfModalGrid{columns:1}.pfModalPanel{margin:0}.pfLbStage{width:100vw;height:76vh}.pfLbNav{width:48px;font-size:44px}.pfIntro h1{font-size:52px}}
+@media(max-width:1100px){.pfGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.pfAllItem{flex-basis:calc((100% - 20px)/3)}.pfModalGrid{columns:2}}
+@media(max-width:700px){.pfGrid{grid-template-columns:1fr;gap:40px}.pfAllGrid{gap:20px 8px}.pfAllItem{flex-basis:calc((100% - 8px)/2)}.pfModalGrid{columns:1}.pfModalPanel{margin:0}.pfLbStage{width:100vw;height:76vh}.pfLbNav{width:48px;font-size:44px}.pfIntro h1{font-size:52px}}

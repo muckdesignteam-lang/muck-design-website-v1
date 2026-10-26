@@ -23,7 +23,6 @@ export const projects: Project[] = [
     images: [
       "/images/projects/moden-rangsit-klong-4/finished-wide.jpg",
       "/images/projects/moden-rangsit-klong-4/hero-finished13.jpg",
-      "/images/projects/moden-rangsit-klong-4/finished-living.jpg",
       "/images/projects/moden-rangsit-klong-4/finished-bedroom.jpg",
       "/images/projects/moden-rangsit-klong-4/finished-kitchen.jpg",
       "/images/projects/moden-rangsit-klong-4/finished-pantry.jpg",
@@ -70,6 +69,26 @@ export const projects: Project[] = [
       "/images/projects/bangkok-boulevard-tiwanon-rangsit/finished-04.jpg",
       "/images/projects/bangkok-boulevard-tiwanon-rangsit/finished-05.jpg",
       "/images/projects/bangkok-boulevard-tiwanon-rangsit/finished-06.jpg",
+    ],
+  },
+  {
+    id: "modi-villa-346",
+    group: "residential",
+    th: "โมดิ วิลล่า ราชพฤกษ์ตัดใหม่ (ถ.346)",
+    en: "Modi Villa Ratchaphruek 346",
+    subtitle: "Design & Built-in",
+    meta: "Residential · Design & Built-in",
+    cover: "/images/portfolio/modi-villa-ratchaphruek-346/finished-08.jpg",
+    images: [
+      "/images/portfolio/modi-villa-ratchaphruek-346/finished-08.jpg",
+      "/images/portfolio/modi-villa-ratchaphruek-346/finished-09.jpg",
+      "/images/portfolio/modi-villa-ratchaphruek-346/finished-03.jpg",
+      "/images/portfolio/modi-villa-ratchaphruek-346/finished-04.jpg",
+      "/images/portfolio/modi-villa-ratchaphruek-346/finished-05.jpg",
+      "/images/portfolio/modi-villa-ratchaphruek-346/finished-06.jpg",
+      "/images/portfolio/modi-villa-ratchaphruek-346/finished-07.jpg",
+      "/images/portfolio/modi-villa-ratchaphruek-346/finished-01.jpg",
+      "/images/portfolio/modi-villa-ratchaphruek-346/finished-02.jpg",
     ],
   },
   {
@@ -173,6 +192,16 @@ export const projects: Project[] = [
 
 // Editorial sequence: four residential and two commercial projects.
 export const imageDimensions: Record<string, [number, number]> = {
+  "/images/portfolio/modi-villa-ratchaphruek-346/finished-01.jpg": [1536, 2048],
+  "/images/portfolio/modi-villa-ratchaphruek-346/finished-02.jpg": [1535, 2048],
+  "/images/portfolio/modi-villa-ratchaphruek-346/finished-03.jpg": [2048, 1536],
+  "/images/portfolio/modi-villa-ratchaphruek-346/finished-04.jpg": [1536, 2047],
+  "/images/portfolio/modi-villa-ratchaphruek-346/finished-05.jpg": [1536, 2048],
+  "/images/portfolio/modi-villa-ratchaphruek-346/finished-06.jpg": [2048, 2048],
+  "/images/portfolio/modi-villa-ratchaphruek-346/finished-07.jpg": [1536, 2047],
+  "/images/portfolio/modi-villa-ratchaphruek-346/finished-08.jpg": [2048, 1536],
+  "/images/portfolio/modi-villa-ratchaphruek-346/finished-09.jpg": [2048, 1535],
+
   "/images/portfolio/ai-ratchaphruek/display-cabinet.jpg": [
     2048,
     1536
