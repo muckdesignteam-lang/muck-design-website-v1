@@ -13,6 +13,17 @@ type Filter = "all" | Group;
 const LINE_URL = "https://lin.ee/xMvkeiO";
 const totalPhotos = new Set(projects.flatMap((p) => p.images)).size;
 
+const editorialLayoutMap: Record<number, ("full" | "half")[]> = {
+  9: ["full", "half", "half", "full", "half", "half", "half", "half", "full"],
+  7: ["full", "half", "half", "full", "half", "half", "full"],
+  5: ["full", "half", "half", "half", "half"],
+};
+
+function getEditorialSpan(total: number, index: number) {
+  const pattern = editorialLayoutMap[total];
+  return pattern?.[index] ?? "half";
+}
+
 const copy = {
   th: {
     kicker: "MUCK DESIGN / ผลงานของเรา",
@@ -152,18 +163,21 @@ export default function PortfolioPage() {
               <p className="pfModalSub">{active.subtitle}</p>
             </div>
             <div className="pfModalGrid">
-              {active.images.map((src, idx) => (
-                <figure className="pfModalItem" key={src}>
-                  <Image
-                    src={src}
-                    alt={`${nameOf(active)} — ${idx + 1}`}
-                    width={imageDimensions[src]?.[0] ?? 1200}
-                    height={imageDimensions[src]?.[1] ?? 900}
-                    sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw"
-                    loading={idx < 3 ? "eager" : "lazy"}
-                  />
-                </figure>
-              ))}
+              {active.images.map((src, idx) => {
+                const span = getEditorialSpan(active.images.length, idx);
+                return (
+                  <figure className={`pfModalItem ${span === "full" ? "is-full" : "is-half"}`} key={src}>
+                    <Image
+                      src={src}
+                      alt={`${nameOf(active)} — ${idx + 1}`}
+                      width={imageDimensions[src]?.[0] ?? 1200}
+                      height={imageDimensions[src]?.[1] ?? 900}
+                      sizes={span === "full" ? "100vw" : "(max-width: 700px) 100vw, 50vw"}
+                      loading={idx < 3 ? "eager" : "lazy"}
+                    />
+                  </figure>
+                );
+              })}
             </div>
             <div className="pfModalFoot">
               <a href={LINE_URL} target="_blank" rel="noreferrer" className="solidBtn">

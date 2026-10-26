@@ -31,8 +31,10 @@
 .pfModalHead{text-align:center;max-width:720px;margin:0 auto 44px;clear:both}
 .pfModalHead h2{font-family:var(--font-manrope),sans-serif;font-size:clamp(28px,4vw,52px);font-weight:600;letter-spacing:-.04em;line-height:1.05;margin:14px 0 10px}
 .pfModalSub{font-size:14px;color:#68645e;margin:0}
-.pfModalGrid{columns:3;column-gap:12px}
-.pfModalItem{margin:0 0 12px;break-inside:avoid;background:#e7e2d8;overflow:hidden}
+.pfModalGrid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:start}
+.pfModalItem{margin:0;background:#e7e2d8;overflow:hidden}
+.pfModalItem.is-full{grid-column:1/-1}
+.pfModalItem.is-half{grid-column:span 6}
 .pfModalItem img{display:block;width:100%;height:auto}
 .pfModalFoot{text-align:center;padding-top:40px}
 .pfLightbox{position:fixed;inset:0;z-index:60;background:rgba(24,24,22,.95);display:flex;align-items:center;justify-content:center}
@@ -42,5 +44,5 @@
 .pfLbNav.prev{left:6px}.pfLbNav.next{right:6px}
 .pfLbCaption{position:absolute;bottom:16px;left:0;right:0;text-align:center;color:#d8d2c8;font-size:12px;letter-spacing:.1em;margin:0}
 footer>a{font-size:11px;letter-spacing:.06em}
-@media(max-width:1100px){.pfGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.pfAllItem{flex-basis:calc((100% - 20px)/3)}.pfModalGrid{columns:2}}
-@media(max-width:700px){.pfGrid{grid-template-columns:1fr;gap:40px}.pfAllGrid{gap:20px 8px}.pfAllItem{flex-basis:calc((100% - 8px)/2)}.pfModalGrid{columns:1}.pfModalPanel{margin:0}.pfLbStage{width:100vw;height:76vh}.pfLbNav{width:48px;font-size:44px}.pfIntro h1{font-size:52px}}
+@media(max-width:1100px){.pfGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.pfAllItem{flex-basis:calc((100% - 20px)/3)}.pfModalGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.pfModalItem.is-full,.pfModalItem.is-half{grid-column:auto}}
+@media(max-width:700px){.pfGrid{grid-template-columns:1fr;gap:40px}.pfAllGrid{gap:20px 8px}.pfAllItem{flex-basis:calc((100% - 8px)/2)}.pfModalGrid{grid-template-columns:1fr;gap:16px}.pfModalItem.is-full,.pfModalItem.is-half{grid-column:auto}.pfModalPanel{margin:0}.pfLbStage{width:100vw;height:76vh}.pfLbNav{width:48px;font-size:44px}.pfIntro h1{font-size:52px}}

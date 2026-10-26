@@ -12,22 +12,24 @@ export type Project = {
 };
 
 export const projects: Project[] = [
-  {
+    {
     id: "moden",
     group: "residential",
     th: "โมเดน รังสิต คลอง 4",
     en: "Moden Rangsit Klong 4",
     subtitle: "Turnkey · 235 sqm",
     meta: "Residential · Turnkey",
-    cover: "/images/projects/moden-rangsit-klong-4/finished-wide.jpg",
+    cover: "/images/projects/moden-rangsit-klong-4/portfolio-01-hallway-hero.png",
     images: [
-      "/images/projects/moden-rangsit-klong-4/finished-wide.jpg",
-      "/images/projects/moden-rangsit-klong-4/hero-finished13.jpg",
-      "/images/projects/moden-rangsit-klong-4/finished-bedroom.jpg",
-      "/images/projects/moden-rangsit-klong-4/finished-kitchen.jpg",
-      "/images/projects/moden-rangsit-klong-4/finished-pantry.jpg",
-      "/images/projects/moden-rangsit-klong-4/finished-shrine.jpg",
-      "/images/projects/moden-rangsit-klong-4/finished-new-01.jpg",
+      "/images/projects/moden-rangsit-klong-4/portfolio-01-hallway-hero.png",
+      "/images/projects/moden-rangsit-klong-4/portfolio-02-living-dining.png",
+      "/images/projects/moden-rangsit-klong-4/portfolio-03-bedroom-softwood.png",
+      "/images/projects/moden-rangsit-klong-4/portfolio-04-wardrobe-study.png",
+      "/images/projects/moden-rangsit-klong-4/portfolio-05-glass-wardrobe-vanity.png",
+      "/images/projects/moden-rangsit-klong-4/portfolio-06-dining-pantry.png",
+      "/images/projects/moden-rangsit-klong-4/portfolio-07-buddhist-room.jpg",
+      "/images/projects/moden-rangsit-klong-4/portfolio-08-bedroom-2.png",
+      "/images/projects/moden-rangsit-klong-4/portfolio-09-corner-builtin.png",
     ],
     featured: true,
   },
@@ -455,6 +457,19 @@ export const imageDimensions: Record<string, [number, number]> = {
     1024
   ]
 };
+
+
+Object.assign(imageDimensions, {
+  "/images/projects/moden-rangsit-klong-4/portfolio-01-hallway-hero.png": [1024, 1536],
+  "/images/projects/moden-rangsit-klong-4/portfolio-02-living-dining.png": [1350, 1080],
+  "/images/projects/moden-rangsit-klong-4/portfolio-03-bedroom-softwood.png": [1275, 1197],
+  "/images/projects/moden-rangsit-klong-4/portfolio-04-wardrobe-study.png": [1380, 1060],
+  "/images/projects/moden-rangsit-klong-4/portfolio-05-glass-wardrobe-vanity.png": [1080, 1350],
+  "/images/projects/moden-rangsit-klong-4/portfolio-06-dining-pantry.png": [1080, 1350],
+  "/images/projects/moden-rangsit-klong-4/portfolio-07-buddhist-room.jpg": [2048, 1536],
+  "/images/projects/moden-rangsit-klong-4/portfolio-08-bedroom-2.png": [1367, 940],
+  "/images/projects/moden-rangsit-klong-4/portfolio-09-corner-builtin.png": [1122, 1402],
+});
 
 // Optional: adjust how a photo is cropped inside the equal-size tiles on /portfolio/all.
 // Example: "/images/portfolio/soi-aree-8/hero.jpg": "50% 30%"  (x% y%, default is center)

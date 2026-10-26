@@ -1,0 +1,17 @@
+MUCK Design V10.4 sample update
+
+Included in this sample:
+- Moden Klong 4 portfolio gallery updated from 7 photos to 9 photos
+- Text removed from the previous image 6 and replaced with a clean version
+- Portfolio modal gallery updated to a more editorial premium layout
+
+Curated image sequence:
+1. Hallway hero
+2. Living + dining overview
+3. Bedroom soft wood tone
+4. Wardrobe + study wall
+5. Glass wardrobe + vanity
+6. Dining + pantry side view
+7. Buddhist room / multipurpose space
+8. Bedroom 2
+9. Corner built-in room
