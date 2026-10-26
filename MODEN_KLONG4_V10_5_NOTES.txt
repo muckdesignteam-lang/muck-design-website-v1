@@ -1,0 +1,6 @@
+V10.5 — Moden Klong 4 compact gallery preview
+- Restored original three-column masonry gallery instead of oversized full-width editorial panels.
+- Reduced modal panel maximum width to 1060px for smaller photos.
+- Refined spacing to 14px.
+- Kept all nine new Moden Klong 4 photographs and image 6 without text.
+- All other project image lists and featured selections remain unchanged.
