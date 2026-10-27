@@ -1,0 +1,6 @@
+V10.7 – Dental Clinic duplicate photo fix
+
+- Selected Projects / Commercial / Dental Clinic / Finished Spaces: replaced repeated finished-new-01.jpg with distinct existing detail-03.jpg.
+- 9 images retained in the Finished Spaces grid.
+- Portfolio V10.6 layout and all other project photo selections unchanged.
+- Portfolio galleries still awaiting new user-supplied photos to reach 9 images where underfilled.

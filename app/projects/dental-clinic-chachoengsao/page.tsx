@@ -15,7 +15,7 @@ const finished = [
   ["/images/projects/dental-clinic-chachoengsao/finished-06.jpg","Vanity / wash area"],
   ["/images/projects/dental-clinic-chachoengsao/finished-07.jpg","Clinic frontage"],
   ["/images/projects/dental-clinic-chachoengsao/detail-01.jpg","Built-in shelving and integrated lighting"],
-  ["/images/projects/dental-clinic-chachoengsao/finished-new-01.jpg","Built-in shelving"],
+  ["/images/projects/dental-clinic-chachoengsao/detail-03.jpg","Finished wall and ceiling detail"],
 ];
 
 const process = [
